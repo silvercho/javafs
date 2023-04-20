@@ -12,30 +12,53 @@
         URL(Uniform Resourse Locator)
         프로토콜://도메인(IP):포트/경로/파일명
         https://www.naver.com
-        http://127.0.0.1:5500/50_html/10_링크.html
-    -->
+        http://127.0.0.1:5500/50_html/10_링크.html                          
+        
+        mailto:메일주소 
+        tel:전화번호 
+    --> 
     
 
     <!-- 현재 페이지(임시 페이지): # -->
-
+    <a href="#">임시 링크</a>
     <!-- 현재 창: _self -->
+    <!-- www.World Wide Web -->
+    <a href="http://www.google.com" target="_self">구글</a>
     
     <!-- 새 창: _blank -->
-    
+    <a href="https://naver.com" target="_blank">네이버</a>
     <!-- 전화번호: tel -->
+    <a href="tel:010-3009-4023">010-3009-4023</a>
 
-    <!-- 이메일: mailto -->
-    
+    <!-- 
+        1. 크롬 브라우저 설정 :
+            chrome://settings/handlers
+            "사이트에서 프로토콜 처리를 요청할 수 있음"을 선택
+        2. 윈도우 설정 > 앱 > 기본 앱 >"메일" 을 크롬으로 변경
+        3. 크롬 브라우저로 Gmail 로그인
+            주소표시줄 끝에 프로토콜 처리 요청 아이콘을 눌러 '허용'을 선택 
+
+     -->
+
+     <!-- 이메일: mailto -->
+
+    <a href="mailto:tjddms01212@gmail.com">G메일</a>
+
     <!-- N메일: https://mail.naver.com/write/popup?srvid=note&to=id@naver.com -->
+    
+    <a href="https://mail.naver.com/write/popup?srvid=note&to=jongwon0906@naver.com">n메일</a>
 
 
     <hr>
 
     <!-- 같은 폴더: 파일명만 기록한다. -->
     <a href="09_이미지.html">09_이미지.html</a>
+    <a href="/50_html/09_이미지.html">09_이미지.html</a>
     <!-- 하위 폴더: 폴더/파일명 -->
-    <a href="assets/pic_trulli.jpg">트룰리</a>
+    <a href="assets/pic_trulli.jpg" target="_blank">트룰리</a>
+    <a href="/50_html/assets/pic_trulli.jpg">트룰리</a>
     <!-- 상위 폴더: ../파일명 -->
     <a href="../workplace.jpg">작업</a>
+    <a href="/workplace.jpg">작업</a>
 </body>
 </html>
