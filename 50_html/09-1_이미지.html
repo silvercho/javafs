@@ -10,6 +10,36 @@
 
 <body>
     <h1>이미지</h1>
+
+    <!-- 
+        <img src="경로설정" alt="" width="너비" height="높이">
+
+        <figure>
+            <img src="" alt="">
+            <figcaption>캡션<figcaption>
+        </figure>
+
+        2. 이미지 맵
+            -하나의 이미지에 하나 이상의 링크 적용
+            -img 태그의 usemap 속성 값은 map 태그의 name 속성과 같아야 한다.
+            -area 태그에 alt 속성을 반드시 기록한다.
+            -좌표 찾기 : https://www.image-map.net/
+
+        <img src="경로설정" alt="" usemap="">
+        <map name="map1">
+            <area shape="rect" coords="x1,y1,x2,y2"  href=""> 
+            <area shape="circle" coords="x1,y1,R"  href=""> 
+            <area shape="poly" coords="12개,x1,y1,x2y2,..... href=""> 
+        </map>
+        
+        <img src="경로설정" alt="" usemap="">
+        <map name="map2">
+            <area shape="rect" coords="x1,y1,x2,y2"> 
+            <area shape="circle" coords="x1,y1,R"> 
+            <area shape="poly" coords="12개,x1,y1,x2y2,....."> 
+        </map>
+
+     -->
     <!-- 
         사용 이미지
         1. 이탈리아 풀리아주의 건축물인 트룰리: assets/pic_trulli.jpg
@@ -19,7 +49,15 @@
     -->
     <h2>캡션 달기</h2>
     <!-- figure와 figcaption을 사용하여 이미지에 캡션을 달아 보세요. -->
+    <figure>
+        <img src="/50_html/assets/pic_trulli.jpg" alt="trulli">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
 
+    <!-- width 와 height는 사용하는 것이 좋으나 css 언어로 지정하는 것이 좋다. -->
+
+    <img src="/workplace.jpg" alt="workplace" width="400" height="379">
+    <a href="https://www.khan.co.kr/"><img src="/50_html/assets/경향신문 (1).png" alt="경향신문 로고"></a>
     <hr>
     <h2>이미지 맵</h2>
     <!-- img 태그의 usemap 속성 값은 map 태그의 name 속성과 같아야 한다. -->
@@ -36,9 +74,11 @@
      -->
     <p>컴퓨터, 핸드폰, 커피 잔을 클릭하여 새 페이지로 이동하고 주제에 대해 자세히 읽어보십시오.</p>
 
-    <img src="" alt="" usemap="">
-    <map name="">
-        <area shape="" coords="" alt="" href="" target="">
+    <img src="/workplace.jpg" alt="workplace" usemap="#map1">
+    <map name="map1">
+        <area shape="rect" coords="293,174,335,246" alt="핸드폰" href="https://google.com" target="_blank">
+        <area shape="circle" coords="339,302,45" alt="커피 잔" href="https://naver.com" target="_blank">
+        <area shape="poly" coords="35,39,270,44,272,351,31,348,45,193" alt="컴퓨터" href="https://frontendw.rf.gd" target="_blank">
     </map>
 
 </body>
