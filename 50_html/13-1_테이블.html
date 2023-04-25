@@ -7,7 +7,7 @@
     <title>HTML</title>
     <link rel="stylesheet" href="css/13_테이블.css">
 </head>
-<body>
+<>
     <h1>표</h1>
     <!-- 
         반드시 <table> : 표
@@ -30,6 +30,7 @@
         <caption>표의 제목</caption>
         <colgroup>
             <col>
+            <!-- span은 <col>을 병합한다. -->
             <col span="2">
         </colgroup>
 
@@ -59,7 +60,48 @@
                 <td>95</td>
             </tr>
         </tfoot>
-
     </table>
-</body>
+
+
+<br>
+
+        <hr>
+<table>
+    
+    <thead>
+        <tr>
+            <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col">글쓴이</th>
+            <th scope="col">날짜</th>
+            <th scope="col">조회</th>
+                 </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td>공지</td>
+        <td>메가MGC커피 원두 관련 공지</td>
+        <td>메가MGC커피</td>
+        <td>2023-02-21</td>
+        <td>3001</td>
+     </tr>
+        <tr>
+            <td>2</td>
+            <td>탄소중립실천포인트제 도입 안내</td>
+            <td>메가MGC커피</td>
+            <td>2023-03-16</td>
+            <td>1214</td>
+        </tr>        
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>1</td>
+            <td>메가MGC커피 영양성분표</td>
+            <td>메가MGC커피</td>
+            <td>2023-03-14</td>
+            <td>1349</td>
+        </tr> 
+    </tfoot>
+    
+</table>
 </html>

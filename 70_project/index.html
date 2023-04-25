@@ -8,84 +8,120 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 내비게이션 -->
-    <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about"><i class="fa-solid fa-user"></i>ABOUT</a></li>
-        <li><a href="#portfolio"><i class="fa-solid fa-grip"></i>PORTFOLIO</a></li>
-        <li><a href="#contact"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
-    </ul>
+    <!-- 헤더 -->
+    <header>
+        <!-- 내비게이션 -->
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i>ABOUT</a></li>
+                <li><a href="#portfolio"><i class="fa-solid fa-grip"></i>PORTFOLIO</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- 섹션1 -->
-    <!-- 로고 -->
-    <h1><a href="#">Cho Seong-Eun</a></h1>
-    <img src="images/parallax1.jpg" alt="패럴렉스 배경 이미지1">
+    <section id="home">
+        <!-- 로고 -->
+        <h1><a href="#">Cho Seong-Eun</a></h1>
+        <img src="images/성은10.jpg" alt="배경 이미지1">
+    </section>
 
     <!-- 섹션2 -->
-    <h2 id="about">ABOUT Me</h2>
-    <p><em>I love coding</em></p>
-    <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <b><i class="fa-solid fa-user"></i>조성은</b>
-    <img src="images/photo.jpg" alt="내 사진">
-    <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <h3>Im really good at:</h3>
-    <ul>
-        <li><i class="fa-brands fa-figma"></i><p>Planning with Figma</p></li>
-        <li><i class="fa-solid fa-laptop-code"></i><p>Frontend Development</p></li>
-        <li><i class="fa-brands fa-java"></i><p>Backend Development</p></li>
-    </ul>
-    <ul>
-        <li>Planning</li>
-        <li>Frontend Projects Done</li>
-        <li>Backend Projects Done</li>
-        <li>National Technical Qualification</li>
-    </ul>
+    <section id="about">
+        <h2 id="about">ABOUT Me</h2>
+        <p><em>I love coding</em></p>
+        <p>한번도 해보지 않은 것에 대한 두려움도 있지만 새로운 것을 공부한다는건 언제나 즐거운 것 같습니다. 내가 한가지 일만 하고 살 수 있을까에 대한 의문에서 시작되어 대학교와 일터에서 한번도 접하지 않은 코딩을 공부하게 되었습니다. 
+        새로운걸 배워 새로운 미래를 열어가고자 합니다.
+        </p>
+        <p> 제 사이트에 오신 것을 환영합니다. 
+            포트폴리오와 자기소개서 저에대한 정보를 열람 하실 수 있습니다.
+        </p>
+        
+        <img src="images/성은11.jpg" alt="내 사진"><br>
+        <b><i class="fa-solid fa-user"></i>조성은</b>
+        <p>1999년 1월 21일<br>
+        2020년 졸업<br>Working Holiday in Sydney<br>Work in amusement park<br>Work in Cafe</p>
+        <h3>Im really good at:</h3>
+        <div>
+            <div>
+                <i class="fa-brands fa-figma"></i><p>Planning with Figma</p>
+                <div><span>90%</span></div>
+            </div> 
+            <div>
+                <i class="fa-solid fa-laptop-code"></i><p>Frontend Development</p>
+                <div><span>90%</span></div>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i><p>Backend Development</p>
+                <div><span>90%</span></div>
+            </div>
+        </div>
+        <ul>
+            <li><span>3+</span>Planning</li>
+            <li><span>4+</span>Frontend Projects Done</li>
+            <li><span>3</span>Backend Projects Done</li>
+            <li><span>2</span>National Technical Qualification</li>
+        </ul>
+      
+    </section>
 
     <!-- 섹션3 -->
-    <h2 id="portfolio">PORTFOLIO</h2>
-    <img src="images/parallax2.jpg" alt="패럴렉스 배경 이미지2">
-    <h2>MY WORK</h2>
-    <p>Here are some of my latest lorem work ipsum tipsum.
-    <br>Click on the images to make them bigger</p>
-
-    <ul>
-        <li><img src="images/pf1.jpg" alt="포트폴리오1"></li>
-        <li><img src="images/pf2.jpg" alt="포트폴리오2"></li>
-        <li><img src="images/pf3.jpg" alt="포트폴리오3"></li>
-        <li><img src="images/pf4.jpg" alt="포트폴리오4"></li>
-        <li><img src="images/pf5.jpg" alt="포트폴리오5"></li>
-        <li><img src="images/pf6.jpg" alt="포트폴리오6"></li>
-        <li><img src="images/pf7.jpg" alt="포트폴리오7"></li>
-        <li><img src="images/pf8.jpg" alt="포트폴리오8"></li>
-    </ul>    
-    <a href="#">LOAD MORE</a>    
+    <section id="portfolio">
+        <h2>PORTFOLIO</h2>
+        <img src="images/성은1.jpg" alt="배경 이미지2">
+        <h2>MY WORK</h2>
+        <p>Here are some of my latest lorem work ipsum tipsum.
+        <br>Click on the images to make them bigger</p>
+        <ul>
+            <li><img src="images/s1.jpg" alt="포트폴리오1"></li>
+            <li><img src="images/s2.jpg" alt="포트폴리오2"></li>
+            <li><img src="images/s3.jpg" alt="포트폴리오3"></li>
+            <li><img src="images/s4.jpg" alt="포트폴리오4"></li>
+            <li><img src="images/s5.jpg" alt="포트폴리오5"></li>
+            <li><img src="images/s6.jpg" alt="포트폴리오6"></li>
+            <li><img src="images/s7.jpg" alt="포트폴리오7"></li>
+            <li><img src="images/s8.jpg" alt="포트폴리오8"></li>
+        </ul>
+        <a href="#">LOAD MORE</a>
+    </section>
     <!-- 섹션4 --> 
-    <b id="contact">CONTACT</b>
-    <h2>WHERE I WORK</h2>
-    <p>I'd love your feedback!</p>
-    <address>
-        경기도 안양시<br>
-        Phone: +82:010-2345-2345<br>
-        Email: hong@naver.com
-    </address>
-    <p>Swing by for a cup of, or leave me a note:</p>
-    <form action="message.php" method="post">
-        <input type="text" name="user_name" placeholder="name">
-        <input type="email" name="user_email" placeholder="email">
-        <input type="text" name="user_message" placeholder=",message">
-        <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
-    </form>
+    <section id="contact">
+        <b>CONTACT</b>
+        <h2>WHERE I WORK</h2>
+        <p>I'd love your feedback!</p>
+        <!-- 구글 맵 #map + tap -->
+       <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6231102491492!2d126.91822007637516!3d37.398744433730904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1ea344cb1%3A0x50ecb9828555f8de!2z7JWI7JaRIOq3uOumsOy7tO2TqO2EsOyVhO2KuO2VmeybkA!5e0!3m2!1sko!2skr!4v1682405750332!5m2!1sko!2skr"></iframe>
+        </div>
+       
+        <address>
+            경기도 안양시<br>
+            Phone: +82:010-2345-2345<br>
+            Email: hong@naver.com
+        </address>
+        <p>Swing by for a cup of, or leave me a note:</p>
+        <form action="message.php" method="post">
+            <input type="text" name="user_name" placeholder="name">
+            <input type="email" name="user_email" placeholder="email">
+            <input type="text" name="user_message" placeholder=",message">
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+        </form>
+    </section>
 
-    <a href="#top"><i class="fa-solid fa-arrow-up"></i>To The Top</a><br>
-    <a href="#" target="_blank"><i class="fa-brands fa-square-facebook">facebook</i></a>
-    <a href="#" target="_blank"><i class="fa-brands fa-instagram">instagram</i></a>
-    <a href="#" target="_blank"><i class="fa-brands fa-snapchat">snapchat</i></a>
-    <a href="#" target="_blank"><i class="fa-brands fa-pinterest">pinterest</i></a>
-    <a href="#" target="_blank"><i class="fa-brands fa-twitter">twitter</i></a>
-    <a href="#" target="_blank"><i class="fa-brands fa-linked-in">fa-linked-in</i></a>
+        <!-- 푸터 -->
 
-    <p>Copyright 2023 HGD. All rights reserved.</p>
-    <!-- 푸터 -->
+        <footer>
+            <a href="#top"><i class="fa-solid fa-arrow-up"></i>To The Top</a><br>
+            <a href="#" target="_blank"><i class="fa-brands fa-square-facebook">facebook</i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram">instagram</i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-snapchat">snapchat</i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-pinterest">pinterest</i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter">twitter</i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-linked-in">fa-linked-in</i></a>
+            <p>Copyright 2023 HGD. All rights reserved.</p>
+        </footer>
+        
 </body>
 </html>
