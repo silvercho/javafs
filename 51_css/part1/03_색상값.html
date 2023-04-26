@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
+
+        /* 
+            2진수 : 0, 1
+            8진수 :0~7
+            16진수 : 0~9 ,A~F
+            10진수 : 0~9 */
+        /* HEX: 16진수 -> 0~9, A~F */
+        /* #RRGGBB 또는 #RGB */
+        /* 
+            #ff0000 -> red
+            #00ff00 -> green
+            #0000ff -> blue
+            #ffff00 -> yellow
+            #ff00ff -> magenta
+            #00ffff -> cyan
+            #000000 , #000 -> 검정
+            #FFFFFF , #FFF -> 흰색 
+            #223344 = #234  
+        */
+
+        /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+            rgb(R,G,B)
+            rgb(0,0,0)
+            rgb(255,255,255)
+            rgb(255,0,0)
+            rgb(255,255,0) */
+
+        /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /* 
+            rgba(R,G,B,alpha)
+            rgb(255,0,0,1)
+            rgb(255,255,0,0.5)
+        */
+
+        /* hsl(0~359, 0~100%, 0~100%) */
+        /* 
+            hsl(hue,saturation,lightness)
+            hsl(77,100%,88%)
+         */
+        
+        /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+
+        /* 카멜(낙타) 케이스 */
+
+        .colorName {color: red;}
+        .color_name {color: #ff0000;}
+        .colorHex {color: #ff0000;}
+        .colorRgb {color: rgb(255, 0, 0);}
+        .colorRgba {color: rgba(255, 137, 137, 0.821);}
+        .colorHsl {color: hsl(0, 100%, 50%);}
+        .colorHsla {color: hsla(0, 100%, 82%, 0.54);}
+
+    </style>
+</head>
+<body>
+    <h1>CSS 색상 값</h1>
+    <p class="colorName">red</p>
+    <p class="colorHex">#ff0000</p>
+    <p class="colorRgb">rgb(255, 0, 0)</p>
+    <p class="colorRgba">rgba(255, 0, 0, 0.5)</p>
+    <p class="colorHsl">hsl(0, 100%, 50%)</p>
+    <p class="colorHsla">hsla(0, 100%, 50%, 0.5)</p>
+</body>
+</html>

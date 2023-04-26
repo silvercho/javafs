@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            요소(element, type, 태그) 선택자 
+            HTML 태그 이름으로 지정
+        */
+        /* 
+            CSS의 속성은 상속 개념이 있다.
+        */
+
+        html {border: 1px solid red;}
+        body {border: 1px solid red;}
+        h1 {border: 1px solid red;}
+        ul {border: 1px solid red;}
+        li {border: 1px solid red;} 
+
+
+
+        /* 
+
+            그룹(Grouping) 선택자:
+            선택자1, 선택자2, ...
+
+        */
+
+        html, body, h1, ul, li , {
+            border: 1px solid red;
+        } 바람직한방법  
+
+
+        /* 범용(Universal, 전체) 선택자 */
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        ul *{border: 1px solid red;}
+        
+
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <ul>
+        <li>그룹 선택자</li>
+        <li>범용 선택자</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            링크 관련 의사(Pseudo, 가상, 유사) 클래스 -> (:)
+
+            a :link - 방문전: 파란색
+            a :visited - 방문후: 보라색
+            선택자 :hover - 올린경우: 파란색
+            선택자 :active - 눌린경우: 빨간색
+
+            :link -> :visited -> :hover -> :active 순으로 기록해야한다.
+        */
+
+        /* a:link {color: red;}
+        a:visited {color: orange;}
+        a:hover {color: yellow;}
+        a:active {color: green;} */
+
+        /* a{ color: #999 text-decoration:none}
+        a:hover {color=#111; text-decoration: underline;} */
+
+        /* 아래 p요소에 마우스 오버시켰을때 글자색 바뀌도록 지정하시오. */
+
+        h1:hover {color: red; cursor: pointer;}
+        h2:hover {color: orange; cursor: pointer;}
+        h3:hover {color: blue; cursor: pointer;}
+        
+    </style>
+</head>
+<body>
+    <h1>의사 클래스 선택자</h1>
+    <a href="#">링크1</a>
+    <a href="#">링크2</a>
+    <a href="#"><img src="../assets/naver.png" alt=""></a>
+    <a href="#"><img src="../assets/google.png" alt=""></a>
+
+    <!-- ctrl+alt+위/아래 방향키 : 다중커서  -->
+    <!-- ctrl+alt+shift+위/아래 방향키 : 다중커서  -->
+
+    <h1>마우스 올려봐!~ 나는 빨강색이다.</h1>
+    <h2>마우스 올려봐!~ 나는 주황색이다.</h2>
+    <h3>마우스 올려봐!~ 나는 파랑색이다.</h3>
+    
+</body>
+</html>
