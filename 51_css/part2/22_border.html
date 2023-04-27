@@ -12,24 +12,76 @@
             margin: 20px;
         }
         /* 
+
+            border-top-width (o)
+            border-width-top (x)
+            
+            border-top-width
+            border-right-width
+            border-left-width
+            border-bottom-width
+
+            border-top-style
+            border-right-style
+            border-left-style 
+            border-bottom-style
+
+            border-top-color
+            border-right-color 
+            border-left-color
+            border-bottom-color
+
+            값은 1개~4개, 값 사이 구분은 띄어쓰기
+            border-width : 두께1 두께2 두께3 두께4
+            border-style : 종류1 종류2 종류3 종류4
+            border-color : 색1 색2 색3 색4
+            
+            border-top : 위
+            border-right : 오른쪽
+            border-left : 왼쪽
+            border-bottom : 아래
+
             border:[두께] 스타일 [색];
             색을 생략하면 글자색
             글자색을 지정하지 않으면 검정
+
         */
 
         /* (1) .b1에 위쪽 테두리를 1px solid red로 지정하시오. */
+        .b1 {
+            border-top-width : 1px;
+            border-top-style : solid;
+            border-top-color : red;
 
+            border-top: 1px solid red;
+        }
 
         /* (2) .b2에 오른쪽 테두리를 1px solid red로 지정하시오. */
-
+        .b2 {
+            border-right: 1px solid red;
+        }
 
         /* (3) .b3에 아래쪽 테두리를 1px solid red로 지정하시오. */
-
+        .b3 {
+            border-bottom: 1px solid red;   
+        }
 
         /* (4) .b4에 왼쪽 테두리를 1px solid red로 지정하시오. */
-
+        .b4 {
+            /* border-left: 1px solid red; */
+            border-width: 1px 3px 5px 10px;
+            border-color: blue red yellow lightcoral;
+            border-style: solid dotted dashed double;
+        }
 
         /* (5) .b5에 테두리를 1px solid red로 지정하시오. */
+        .b5 {
+            border-width : 1px;
+            border-style : solid;
+            border-color : red;
+
+            border: 1px solid red;
+        }
 
 
         
