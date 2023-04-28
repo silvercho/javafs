@@ -4,61 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>메가커피</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="wrap">
         <!-- header -->
-        <header>
-            <h1><a href="#">메가커피</a></h1>
-            <nav>
-                <!-- ul.main>li*4>a{메뉴$}ul.sub>li.4>a{서브} -->
-                <ul class="main">
-                    <li>
-                        <a href="">메뉴1</a>
-                        <ul class="sub">
-                            <li class="4"><a href="">서브</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">메뉴2</a>
-                        <ul class="sub">
-                            <li class="4"><a href="">서브</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">메뉴3</a>
-                        <ul class="sub">
-                            <li class="4"><a href="">서브</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">메뉴4</a>
-                        <ul class="sub">
-                            <li class="4"><a href="">서브</a></li>
-                        </ul>
-                    </li>
-                </ul>   
-            </nav>
-        </header> <!-- //header -->
+        <header class="clearfix">
+            <h1 class="logo"><a href="#">메가커피</a></h1>
+           <nav>내비게이션</nav>
+        </header> 
+        <!-- //header -->
 
         <!-- slide -->
-        <div>
+        <div id="slide">
             이미지 슬라이드
         </div><!-- //slide -->
 
         <!-- main contents -->
-        <div>
-            <div>공지사항/갤러리</div>
-            <div>배너</div>
-            <div>바로가기</div>
+        <div id="contents" class="clearfix">
+            <div class="tabs">공지사항/갤러리</div>
+            <div class="bannr">배너</div>
+            <div class="shortcut">바로가기</div>
         </div><!-- //main contents -->
 
         <!-- footer -->
-        <footer>
-            <div>하단로고</div>
-            <div>주소 및 저작권</div>
-            <div>SNS</div>
+        <footer class="clearfix">
+            <div class="b_logo">하단로고</div>
+            <div class="addr">주소 및 저작권</div>
+            <div class="sns">SNS</div>
         </footer><!-- //footer -->
 
 </body>
