@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 자식이 float가 되면, 부모의 높이가 0 */
+        .wrap {
+            background: #999;
+            width: 1500px;
+            margin :0 auto;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+            width:360px;
+            height:240px;
+            background: #ccc;
+            margin-right : 20px;
+            margin-bottom : 20px
+        }
+        li:nth-of-type(4n) {
+            margin-right: 0;
+        }
+
+        li:nth-of-type(4)~li {
+            margin-bottom: 0;
+        }
+
+        /* li:not(:nth-of-type(4)~li) {
+            margin-bottom; :20px
+        } */
+
+       /* li:not(:nth-of-type(4n)) {
+        margin-right: 20px;
+       } */
+         
+    </style>
+</head>
+<body>
+    <h1>플로트</h1>
+    <div class="wrap">
+        <ul>
+            <li >박스1</li>
+            <li >박스2</li>
+            <li >박스3</li>
+            <li >박스4</li>
+            <li >박스5</li>
+            <li >박스6</li>
+            <li >박스7</li>
+            <li >박스8</li>
+        </ul>
+    </div>
+</body>
+</html>
