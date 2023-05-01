@@ -8,27 +8,28 @@
 
 /* header::after, .contents::after, footer::after  */
 
-.clearfix::after {
+/* .clearfix::after {
     content:'';
     clear: both;
     display: block;
-}
+} */
 
-/* 전체 */
 /* 공통 */
 #wrap {
     /* 가로 가운데 맞춤  */
     width : 1200px;
     margin:0 auto;
-
 }
 
-.logo, nav, #contents div, footer div {
-    float: left;
+header, #contents , footer {
+    /* float: left; */
+    display:flex;
 }
 
 /* 헤더 */
-
+header {
+    background: lightblue;
+}
 /* 로고 */
 .logo {
     width: 200px;

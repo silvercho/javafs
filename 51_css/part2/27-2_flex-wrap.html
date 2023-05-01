@@ -11,20 +11,26 @@
             width: 100px;
             height: 100px;
             background-color: gray;
+            flex-grow: 0;
+            flex-shrink: 0;
         }
 
         .container {
             display: flex;
             outline:1px solid red;
+            /* 자식 수 보다 부모 영역이 작을때 */
+            flex-wrap: nowrap;
         }
 
         /* (1) .flwnw에 줄바꿈 속성을 nowrap으로 지정하시오. */
+        .flwnw {flex-wrap: nowrap;}
 
         
-        /* (2) .flwnw에 줄바꿈 속성을 wrap으로 지정하시오. */
+        /* (2) .flww에 줄바꿈 속성을 wrap으로 지정하시오. */
+        .flww {flex-wrap: wrap;}
 
-
-        /* (3) .flwnw에 줄바꿈 속성을 wrap-reverse으로 지정하시오. */
+        /* (3) .flwwr에 줄바꿈 속성을 wrap-reverse으로 지정하시오. */
+        .flwwr{flex-wrap: wrap-reverse;}
 
 
     </style>
@@ -62,6 +68,9 @@
         <div>7</div>
         <div>8</div>
     </div>
+
+    <hr>
+    
 
 </body>
 
