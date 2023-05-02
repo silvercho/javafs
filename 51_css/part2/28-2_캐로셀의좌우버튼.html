@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+       .carousel {
+        position: relative;
+        height: 700px;
+        background: lightblue;
+       }
+
+       /* position:absolute로 지정하면 width: 콘텐츠 크기;  */
+       /* position:relative로 지정하면 width: 100% */
+       /* position:relative로 자기 자신의 자리는 차지 하고있다. */
+       
+       .controls {
+        position: absolute;
+        width: 100%;
+        height: 78px;
+        top: 50%;
+        transform: translateY(-50%);
+       }
+
+      .controls a {
+        position: absolute; 
+        transform: translateX(-50%);
+       }
+       /* calcu(값1 연산자 값2) */
+       /* 산술 연산자 : (+,-,*,/) */
+       /* 연산자와 피연산자(값1, 값2) 사이는 한 칸 공백으로 띄운다. */
+       #prev {left: calc(50% - 480px);}
+       #next {left: calc(50% + 480px);}
+
+       .pager {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px;
+       }
+
+       .pager a {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 8px;
+        background: lightpink;
+        border-radius: 50%;
+        /* 짧은 텍스트를 숨기기 */
+        text-indent: -9999em;
+       }
+
+       .pager a.active {
+        background: red;
+       }
+
+    </style>
+</head>
+<body>
+    <h1>캐로셀(Carousel)의 좌우버튼 배치</h1>
+    <div class="carousel">
+        <div class="controls">
+            <a href="#" id="prev"><img src="../assets/btn_slide_prev.png" alt="btn_slide_prev"></a>
+            <a href="#" id="next"><img src="../assets/btn_slide_next.png" alt="btn_slide_next"></a>
+        </div>
+        <div class="pager">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
+    </div>
+</body>
+</html>
