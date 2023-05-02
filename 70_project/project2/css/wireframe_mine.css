@@ -36,6 +36,7 @@ nav {
 nav li {
     display: inline-block;
 }
+
 /* section common */
 section {
     width: 1496px;
@@ -54,10 +55,10 @@ section {
     margin-bottom: 32px;
 }
 /* section1 */
-#main_img {
+#main_video {
     position: relative;
 }
-#main_img h2 {
+#main_video h2 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -66,34 +67,34 @@ section {
     padding: 8px 16px;
 }
 /* section2 ,3 common*/
-#menu li, #event li{
+#event li, #sig li{
     float: left;
     width: 362px;
 }
 
-#menu ul::after, #event ul::after {
+#event ul::after, #sig ul::after {
     content: '';
     clear: both;
     display: block;
 }
 
-#menu li:not(:nth-of-type(4n)), #event li:not(:nth-of-type(4n)) {
+#event li:not(:nth-of-type(4n)), #sig li:not(:nth-of-type(4n)) {
     margin-right: 16px;
 }
 
 /* section2 */
-#menu h2 {
+#event h2 {
     margin-bottom: 48px;
 }
 
 /* section3 */
-#event li h3 {
+#sig li h3 {
     margin: 16px 0 8px;
 }
-#event li p {
+#sig li p {
     margin: 8px 0 8px;
 }
-#event li a {
+#sig li a {
     display: block;
     background: #ccc;
     text-align: center;
