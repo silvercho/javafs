@@ -6,13 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /*  
+            CSS의 속성중 상속되는 속성이 있다.
+            제일 안에 있는 속성이 도출됨.
+        */
         html {font-size: 20px;}
         body {font-size: 10px;}
 
-        /* em 단위는 부모 태그에 지정한 글꼴 크기를 기준 */
-        /* rem 단위는 html 태그에 지정한 글꼴 크기를 기준 */
-        /* % 단위는 부모 태그에 지정한 글꼴 크기를 기준 */
+        /* 
+            font-size : 값;
+            값: 
+                xx-small,x-small, small ,smaller
+                medium
+                large, larger, x-large, xx-large 
+        */
 
+        /* em 단위는 '부모 태그'에 지정한 글꼴 크기를 기준 */
+        /* rem 단위는 'html 태그'에 지정한 글꼴 크기를 기준 */
+        /* % 단위는 '부모 태그'에 지정한 글꼴 크기를 기준 */
+
+        .fz1 {font-size: 16px;}
+        .fz1_1 {font-size: 1em;}
+        .fz1_2 {font-size: 1rem;}
+        .fz1_3 {font-size: medium;}
+        .fz1_4 {font-size: 100%;}
+
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        .fz2 {font-size: ;}
+        .fz2_2 {font-size: ;}
+        html {font-size: 20px;}
+        body {font-size: 10px;}
+
+        /* 
+            font-size : 값;
+            값: 
+                xx-small,x-small, small ,smaller
+                medium
+                large, larger, x-large, xx-large 
+        */
+
+        /* em 단위는 '부모 태그'에 지정한 글꼴 크기를 기준 */
+        /* rem 단위는 'html 태그'에 지정한 글꼴 크기를 기준 */
+        /* % 단위는 '부모 태그'에 지정한 글꼴 크기를 기준 */
+
+        .fz1 {font-size: 16px;}
+        .fz1_1 {font-size: 1em;}
+        .fz1_2 {font-size: 1rem;}
+        .fz1_3 {font-size: medium;}
+        .fz1_4 {font-size: 100%;}
+
+        .fz2 {font-size: xx-small;}
+        .fz2_1 {font-size: 10px;}
+
+        .fz3 {font-size: x-small;}
+        .fz3_1 {font-size: 10px;}
+
+        .fz4 {font-size: small;}
+        .fz4_1 {font-size: 13px;}
+
+        .fz5 {font-size: smaller;}
+        .fz5_1 {font-size: 13.333px;}
+
+        .fz6 {font-size: large;}
+        .fz6_1 {font-size: 18px;}
+
+        .fz7 {font-size: larger;}
+        .fz7_1 {font-size: 19.2px;}
+
+        .fz8 {font-size: x-large;}
+        .fz8_1 {font-size: 24px;}
+
+        .fz9 {font-size: xx-large;}
+        .fz9_1 {font-size: 32px;}
+       
     </style>
 </head>
 <body>

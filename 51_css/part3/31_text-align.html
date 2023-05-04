@@ -7,13 +7,31 @@
     <title>HTML+CSS</title>
     <style>
 
-    </style>
+        /* 속성 값;은 블럭요소에 기록하면, 블럭요소 안에있는 인라인 요소가 정렬된다.*/
+        .tal {text-align: left;}
+        .tar {text-align: right;}
+        .tac {text-align: center;}
+        .taj {
+            text-align: justify;
+            word-break: break-all;
+        }
+        .tac span{
+            display: inline-block;
+            width: 200px;
+            height: 30px;
+            border: 1px solid red;
+            }
+            </style>
 </head>
+
 <body>
     <h1>텍스트 수평 정렬</h1>
     <p class="tal">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
     <p class="tar">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
     <p class="tac">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
     <p class="taj">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
+    <p class="tac">
+        <span>상속</span>
+    </p>
 </body>
 </html>
