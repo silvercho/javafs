@@ -10,22 +10,28 @@
 
 html {
     font-size: 10px;
+    
 }
 
 body {
-    font: 1.5rem 'Noto Sans KR', sans-serif;
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
     color: #333;
 }
 
 /*  a태그와 button 태그 글자 색은 body 글자 색을 상속 받지 않는다. */
 a {
     color: #333;
+    text-decoration: none;
 }
 
 img {
     width: 100%;
+    vertical-align: top;
 }
 
+li {
+    list-style: none;
+}
 /* header */
 header {
     position: fixed;
@@ -35,26 +41,27 @@ header {
 
 header ul {
     height: 54px;
-    padding: 0 32px;
+    padding: 0 16px;
     display: flex;
     align-items: center;
 }
 
-header li {
-    margin: 0 8px;
-}
 header a {
     padding: 4px 16px;
 }
 header a:hover {
-    background: #ccc;
-    
+    background: #ccc;   
+}
+header i {
+    margin-right: 8px;
 }
 /* section1 */
 #home {
     position: relative;
+    background: url(../images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+    height: 930px; 
+    /* 100vh- 반응형 할때  */
 }
-
 /* 요소를 부모 안에 정가운데 배치 */
 .logo {
     position: absolute;
@@ -70,6 +77,28 @@ header a:hover {
 }
 
 /* section2 */
+#about h2, h3 {
+    text-align: center;
+}
+#about p{
+    margin-top: 20px;
+    text-align: center
+}
+#about b{
+    margin-top: 20px;
+    text-align: center
+}
+#about div1 {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+
 /* section3 */
 /* section4 */
 

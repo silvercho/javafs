@@ -13,6 +13,11 @@
             text-shadow: 가로위치 세로위치 [흐림] [색], 가로위치 세로위치 [흐림] [색], ...;
             색의 기본값: 글자색 
         */
+        /* 
+            박스 그림자: 
+            box-shadow: [inset] 가로위치 세로위치 [흐림] [퍼짐] [색], [inset] 가로위치 세로위치 [흐림] [퍼짐]  [색], ...;
+            색의 기본값: 글자색 
+        */
 
         /* 
             x위치: 2px
@@ -21,6 +26,7 @@
             color: black
         */
         .ts1 {
+            text-shadow: 2px 2px 4px #000;
             color: white;
         }
 
@@ -31,6 +37,7 @@
             color: black, blue, darkblue
         */
         .ts2 {
+            text-shadow: 1px 1px 2px black,0 0 5px blue,0 0 5px darkblue;
             color: white;
         }
 
@@ -43,6 +50,7 @@
             color: 모두 black
         */
         .ts3 {
+            text-shadow: -1px 0 black, 0 1px black,1px 0 black,0 -1px black;
             color: coral;
         }
     </style>

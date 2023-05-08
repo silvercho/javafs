@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            white space-공간처리;
+                값 :normal,nowrap,pre,pre-wrap,pre-line
+        */
         /* 자동 줄 바꿈(o), Enter(x), sp/tab(x) */
         .whn {white-space: normal;}
         /* 자동 줄 바꿈(x), Enter(x), sp/tab(x) */
@@ -21,26 +25,39 @@
 <body>
     <h1>CSS 텍스트 속성</h1>
     <h2>white-space</h2>
-    <p class="whn">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whn" style="color: red;"> Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem ipsum do
+        lor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
-    <p class="whnw">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whnw" style="color: blue;">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+             Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
     <p class="whp">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem            ipsum dolor sit. 
+        Lorem ipsum dolor 
+          sit. 
+        Lorem ipsum dolor sit. Lorem 
+          ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
-    <p class="whpw">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit.</p>
+    <p class="whpw" style="color: blue;">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem            ipsum dolor sit. Lorem ipsum dolor   sit. 
+         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+               Lorem ipsum dolor sit.</p>
+
     <p class="whpl">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
+    <p class="whpw">
+    나보기가 역겨워
+    가실 때에는
+    말 없이 고이 보내 드리오리다
 
+    영변에 약산
+    진달래 꽃
+    아름 따다 가실 길에 뿌리오리다
+    </p>
 </body>
 </html>
