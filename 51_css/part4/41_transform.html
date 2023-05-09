@@ -8,12 +8,16 @@
     <title>HTML+CSS</title>
     <style>
         .outer {
+            position: relative;
+            width: 200px;
+            height: 100px;
             border: 1px solid black;
-            /* perspective는 관점 속성으로 부모 요소에 지정한다. */
-            perspective: 1000px;
+            /* perspective는 관점 속성으로 부모 요소에 지정한다.
+            
             /* 관점의 위치로 perspective 속성과 함께 사용해야 한다. */
-            perspective-origin: 50% 50%;
-            margin: 20px;
+            /* perspective-origin: 50% 50%; */
+            margin: 20px 0;
+            /* perspective: 800px; */
         }
 
         .trf {
@@ -25,33 +29,84 @@
         }
 
         /* 
-            transform: translate(x, y);
-            transform: scale(w, h);
-            transform: rotate(각도); (단위: deg)
+            변환
+            1)2D:x축 y축
+            2)3D : x축 y축 z축 
+
+            1)이동 (translate)
+            2)크기 (scale)
+            3)회전(rotate)
+            4)기울임 (skew)
+
+            transform: translate
+            transform: translateX
+            transform: translateY
+            transform: translateZ
+            
+            transform: scale(x,y,z,3d;
+            transform: rotate(각도,x,y,z,3d); (단위: deg)
             transform: skew(각도, 각도) (단위: deg);
+
+            perspective (숫자)
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
-
+        /* transform:translate(0,0); 값을 하나만 쓰면 x위치로 적용된다. */
+        .trftr {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .outer:hover .trftr {
+            transform: translate(100px, 0);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
+        /* transform: scale (1,1); 1보다 작으면 축소,1보다 크면 확대,값을 하나만 쓰면 가로/세로 같은 크기로 확대 */
 
-
-        .trfro {
-            /* 변환의 기준 */
-            transform-origin: 0 0;
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
         }
-        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
 
+        /* 
+          변환의 기준
+            transform-origin: 50%,50%;
+            단위 : px,%
+            x축 :left ,right ,center
+            y축 :top,bottom,center
+         */
+
+         /* 
+            position:absolute; position:fixed;일 경우 부모가 자식의 크기를 못 갖는다.
+         */
+         .trfro {
+            transform-origin: 70%;
+         }
+        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
+        .outer:hover .trfro{
+            transform: rotate(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfrox {
+            transform: rotateX(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
 
+        .trfroy {
+            transform-origin: 0 0;
+        }
+        .outer:hover .trfroy {
+
+            transform: perspective(200px) rotateY(180deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
-
+        /* skew(x,y) 하나의 값만 기록 하면 x를 가리킨다. */
+        .outer:hover .trfsk{
+            transform: skew(10deg);
+        }
 
     </style>
 </head>
@@ -68,10 +123,10 @@
     </div>
     <h2>회전</h2>
     <div class="outer">
-        <span class="trf trfro">rotate</span>transform
+        <span class="trf trfro">rotatex</span>transform
     </div>
     <div class="outer">
-        <span class="trf trfrox">rotate</span>transform
+        <span class="trf trfrox">rotatey</span>transform
     </div>
     <div class="outer">
         <span class="trf trfroy">rotate</span>transform
