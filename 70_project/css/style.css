@@ -84,22 +84,33 @@ header i {
     margin-top: 20px;
     text-align: center
 }
-#about b{
-    margin-top: 20px;
-    text-align: center
-}
-#about div1 {
+#about .me {
     display: flex;
     margin-top: 20px;
-    justify-content: space-between;
-    flex-direction: row;
-    text-align: center;
-    margin-right: 300px;
-    margin-left: 300px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
 /* section3 */
+#portfolio h2, p{
+    display: flex;
+    text-align: center;
+}
+.first {
+    padding-top: 8px;
+}
+.first li {
+    padding: 8px;
+    
+}
+.first {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
 /* section4 */
 
 /* footer */
