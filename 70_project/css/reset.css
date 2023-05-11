@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    
+}
+
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+
+/*  a태그와 button 태그 글자 색은 body 글자 색을 상속 받지 않는다. */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+li {
+    list-style: none;
+}
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+header ul {
+    height: 54px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    padding: 4px 16px;
+}
+header a:hover {
+    background: #ccc;   
+}
+header i {
+    margin-right: 8px;
+}
+/* section1 */
+#home {
+    position: relative;
+    background: url(../images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+    height: 930px; 
+    /* 100vh- 반응형 할때  */
+}
+/* 요소를 부모 안에 정가운데 배치 */
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    padding: 8px 24px;
+}
+
+.logo a {
+    color: #fff;
+}
+
+/* section2 */
+#about {
+    padding-left: 600px;
+    padding-right: 600px;
+
+}
+#about h2, h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+#about p{
+    margin-top: 20px;
+    text-align: center;
+}
+#about ul{
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#about div {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+.pfb {
+    display: flex;
+    flex-direction: column;
+}
+/* section3 */
+#portfolio h2, p{
+    display: flex;
+    text-align: center;
+}
+.first {
+    padding-top: 8px;
+}
+.first li {
+    padding: 16px;
+    
+}
+.first {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+/* section4 */
+
+/* footer */

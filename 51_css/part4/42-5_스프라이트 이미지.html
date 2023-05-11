@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            크기:390*5880
+            프레임 수 : 35
+            1프레임의 크기 :390*168
+         */
+        .anim {
+            /* animation-name: move;
+            animation-duration: 2s;
+            animation-timing-function: steps(34);
+            animation-fill-mode: forwards; */
+
+        animation : txt 2s steps(34) 2 forwards;
+    }
+        div {
+            /* position: relative; */
+            width:390px;
+            height:168px;
+            overflow: hidden;
+            background-image: url(../assets/bg-txt.png);    background-repeat :no-repeat;
+            background-position: 0 0;
+            left:0px; 
+            top:0px;
+            text-indent: -9999em;
+        }
+        
+        @keyframes txt {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 -5712px;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">박스</div>
+</body>
+</html>

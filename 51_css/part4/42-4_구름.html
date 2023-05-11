@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* infinite 이면 forwards는 작동 하지 않는다. */
+        .anim {
+        animation : move 2s forwards;
+    }
+        div {
+            position: relative;
+            width:178px;
+            height:100px;
+            background: url(../assets/bg-main0-0.png) no-repeat 0 0;
+            margin:20px;
+            left:0px; 
+            top:0px;
+            text-indent: -9999em;
+        }
+        
+        @keyframes move {
+            0% {
+                opacity: 0;
+                left:0;
+                animation-timing-function: ease-out;
+            }
+            100% {
+                opacity: 1;
+                left:400px; 
+                animation-timing-function: ease-out;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">박스</div>
+</body>
+</html>

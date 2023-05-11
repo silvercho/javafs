@@ -7,11 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* 
+            가상(유사,슈도,의사) 클래스 선택자
+            :link, :visited, :hover, :active
+            :nth-child(), :nth-of-type(), ...
+            :not()
+
+            :target
+            :checked
+        
+        */
         /* p가 타깃되었을 때 */
         /* input의 라디오 버튼이 체크되었을 때 */
+        .input { display: none;}
+        :checked + p {background-color: brown;}
         /* h2의 3번째 자손 중 h2와 p를 제외하고 */
-
         /* 아래 내용을 확인한 후 지우고 지정해 보세요. */
+
+
+
 
         p:target {
             background: yellow;
@@ -47,9 +64,9 @@
     <label for="tab4">클릭2</label>
 
     <input type="radio" name="clkGroup" id="tab3" checked>
-    <p>Lorem ipsum dolor sit amet.</p>
+    <p>1번 선택</p>
     <input type="radio" name="clkGroup" id="tab4">
-    <p>Lorem ipsum dolor sit amet.</p>
+    <p>2번 선택</p>
 
     <h2>:not(선택기)</h2>
     <h3>Lorem ipsum</h3>
