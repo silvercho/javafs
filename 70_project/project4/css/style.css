@@ -1,19 +1,15 @@
 @charset "utf-8";
+
+/* ctrl+f : 찾기 */
 /* 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* header::after, .contents::after, footer::after  */
-
-/* .clearfix::after {
-    content:'';
-    clear: both;
-    display: block;
-} */
-
+img {
+    width: 100%;
+}
 /* 공통 */
 #wrap {
     /* 가로 가운데 맞춤  */
@@ -22,7 +18,6 @@
 }
 
 header, #contents , footer {
-    /* float: left; */
     display:flex;
 }
 
@@ -34,7 +29,7 @@ header {
 .logo {
     width: 200px;
     height: 100px;
-    background: lightpink;
+    background: beige;
 }
 
 /* 내비게이션 */
@@ -50,6 +45,27 @@ nav {
 #slide {
     height: 300px;
     background: lightcoral;
+    overflow: hidden;
+}
+#slide ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 400%; /* 부모크기의4배 */
+    animation: slide 9s infinite;
+}
+@keyframes slide {
+    0% {left: 0;}
+    5% {left: -100%;}
+    33% {left: -100%;}
+    38% {left: -200%;}
+    66% {left: -200%;}
+    71% {left: -300%;}
+    99.99% {left: -300%;}
+    100%{left: -0%;}
+}
+#slide img {
+    height: 300px;
 }
 
 /* 메인콘텐츠 */
@@ -72,15 +88,12 @@ nav {
 }
 
 /* 푸터 */
+
 footer {
     height: 300px;
-    background: lightgoldenrodyellow;
 }
-.b_logo {
-    width: 200px;
-    height: 100px;
-    background: firebrick;
-}
+
+
 .addr {
     width: 800px;
     height: 100px;
@@ -90,4 +103,9 @@ footer {
     width: 200px;
     height: 100px;
     background: aquamarine;
+}
+.b_logo {
+    width: 200px;
+    height: 100px;
+    background: firebrick;
 }
