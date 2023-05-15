@@ -10,11 +10,30 @@
 
 <body>
     <h1>출력</h1>
+
+
     <script>
         /* 
-            객체: window, console, document ...
-            메서드(매개변수1, 매개변수2 ...): alert(), confirm() prompt(), write(), log()
 
+            사람 객체 
+            공부하다()     메서드()
+            자동차 객체
+            달린다()       메서드 ()
+
+            형식:
+            객체.메서드()
+            사람.공부하다()
+            자동차.달린다()
+
+            객체: window, console, document, Date(), Math(),Array , String,  ...
+            메서드(매개변수n):
+                - alert('메시지')
+                -confirm('메시지') 
+                -prompt('텍스트')
+                write(표현식)
+                log('메시지')
+
+            //아래 window 객체는 생략 가능 
             alert('메시지'): 알림 창 출력
             confirm('메시지'): 확인/취소 창 출력
             prompt('텍스트'[, '기본텍스트']): 프롬프트 창 입력
@@ -23,19 +42,19 @@
         */
 
         // 경고창
-
+        alert('경고창');
         
         // 확인/취소창
-
+        confirm('확인/취소 창');
         
         // 문서에 쓰기
-
+        document.write('문서에 쓰기')
         
         // 콘솔
-
+        console.log('콘솔 출력');
 
         // 입력
-        
+        prompt('이름을 입력하세요','홍길동');
     </script>
 </body>
 
