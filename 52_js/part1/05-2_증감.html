@@ -14,14 +14,33 @@
         /* 
             산술 연산자: ++(1씩 증가), --(1씩 감소)
 
+            //전위 연산
             var A = ++B -> B값을 1 증가 후 A에 대입
+             //후위 연산
             var A = B++ -> B를 A에 대입 후 B값을 1증가
         */
+
 
         var num1 = 10;
         var num2 = 20;
         var result;
         
+        
+        ++num1;
+        document.write('num1 = ' + '<br>');
+
+        ++num1;
+        document.write(num1+'<br>');
+
+
+        result = ++num2;
+        document.write(result + '<br>');
+        document.write(num2 + '<br>');
+        
+        result = num2++;
+
+        document.write(result + '<br>');
+        document.write(num2 + '<br>');
     </script>
 </body>
 
