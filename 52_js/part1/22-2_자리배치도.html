@@ -18,15 +18,21 @@
                 코드2;
             }
         */
-
+        // 학생 수 와 한 줄에 앉는 인원 수 를 입력 받아 총 몇 줄이 필요 한지 구하시오. 
         // 입력
-
+            let stNum = prompt("학생은 몇 명인가요?")
+            let colNum = prompt("한 줄에 몇 명씩 앉습니까?")
 
         // 처리
-
+            if (stNum % colNum === 0) {
+                rowNum = parseInt(stuNum / colNum);
+            }
+            else {
+                rowNum = parseInt(stuNum / colNum) + 1;
+            }
 
         // 출력
-
+            document.write("모두" + rowNum + "개의 줄이 필요합니다.");
 
     </script>
 </body>

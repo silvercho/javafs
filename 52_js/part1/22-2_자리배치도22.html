@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        /* 
+            if (조건식) {
+                코드1;
+            } else {
+                코드2;
+            }
+        */
+        // 학생 수 와 한 줄에 앉는 인원 수 를 입력 받아 총 몇 줄이 필요 한지 구하시오. 
+        // 입력
+
+           var stu_num = prompt(" 학생수 는 몇명입니까?");
+           var count = prompt( "한 줄에 앉는 학생 수 는 몇명입니까?");
+           var total_line;
+
+        // 처리
+        // 학생수 / 한 줄 인원수 -> 몫, 나머지
+        //몫 : parseInt(학생수 / 한 줄 인원수)의 정수 부분
+        //나머지 : 학생 수 % 한 줄 인원 수 
+        
+           if (stu_num % count === 0) {
+                total_line = parseInt(stu_num / count );
+           }
+           else {
+                total_line = parseInt(stu_num / count) + 1;
+           }
+
+        // 출력 문장 
+         document.write (total_line + "줄이 필요합니다.");
+    </script>
+</body>
+
+</html>
