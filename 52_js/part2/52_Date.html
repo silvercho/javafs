@@ -39,8 +39,28 @@
             setMilliseconds()
             setTime()
         */
+       // Tue May 23 2023 16:16:48 GMT+0900 (한국 표준시)
+        let d = new Date();
+        console.log(d)
+        //년 (yyyy)
+        document.write(d.getFullYear(), '<br>');
+        //월 (mm)0(1월)~11(12월)
+        document.write(d.getMonth(), '<br>');
+        //일 (dd)
+        document.write(d.getDate(), '<br>');
+        //요일 (week): 0(일)~6(토)
+        document.write(d.getDay(), '<br>');
+        //시 (hh)
+        document.write(d.getHours(), '<br>');
+        //분 (mm)
+        document.write(d.getMinutes(), '<br>');
+        //초 (ss)
+        document.write(d.getSeconds(), '<br>');
+        document.write(d.getTime(), '<br>');
 
 
+        var d2 = new Date(2020,2,20);
+        console.log(d2);
         
     </script>
 </body>

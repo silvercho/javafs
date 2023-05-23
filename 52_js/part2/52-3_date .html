@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>날짜 객체</h1>
+    <script>
+        
+        /* 
+            1초 = 1000밀리초
+            1분(60초) = 1000 * 60 = 60000밀리초
+            1시간(60분) = 1000 * 60 * 60 = 3600000밀리초
+            1일(60분*24) = 1000 * 60 * 60 * 24 = 86400000밀리초
+
+            Math.ceil(숫자): 소수점 첫째 자리에서 올림하여 정수 반환 */
+    
+
+      // Tue May 23 2023 16:16:41 GMT+0900 (한국 표준시)
+      let d = new Date();
+        console.log(d);
+        //년 (yyyy)
+        document.write(d.getFullYear(), '<br>');
+        //월 (mm)0(1월)~11(12월)
+        document.write(d.getMonth(), '<br>');
+        //일 (dd)
+        document.write(d.getDate(), '<br>');
+        //요일 (week): 0(일)~6(토)
+        document.write(d.getDay(), '<br>');
+    
+        // if 를 사용하여 요일을 일요일~토요일 까지 문자열로 표시하기 
+        let week = d.getDay();
+
+    document.write(d.getDay(), '<br>');
+
+        //시 (hh)
+        //if 사용하여 오전과 오후를 구분하여 12시간제로 표시하기
+        //예) 오후 5시 
+
+        let hh = d.getHours();
+        if (hh>= 13){
+            hh= hh-12;
+            document.write('오후' + hh +'시', '<br>');
+        } else {
+            document.write('오전' + hh +'시', '<br>');
+        }
+        document.write(d.getHours(), '<br>');
+        //분 (mm)
+        // 01~ 09,10~60
+        let mm = d.getMinutes();
+        let ss = d.getSeconds();
+
+        if (mm < 10 || ss <10) {
+            mm = '0' + mm;
+            ss = '0' + ss;
+        } 
+        document.write(d.getTime(), '<br>');
+
+
+    </script>
+</body>
+
+</html>

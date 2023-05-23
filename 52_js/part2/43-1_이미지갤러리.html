@@ -12,13 +12,35 @@
     <h1>이미지 갤러리</h1>
     <div id="galleryZone">
         <p>
-            <button onclick="gallery(0)">이전</button>
-            <button onclick="gallery(1)">다음</button>
+            <!-- 인라인 스크립트 -->
+            <button onclick="gallery(0);">이전</button>
+            <button onclick="gallery(1);">다음</button>
         </p>
         <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
     </div>
+    <!-- 내부 스크립트  -->
     <script>
-        /* 
+        /*  
+            HTML의 이벤트 속성 :onclick 
+            객체.메서드 
+            document.wirte()
+            document.getElementById('아이디명')
+            document.getElementByClassName('클래스명')
+            document.getElementByTagName('태그명')
+            document.querySelector('선택자')
+            document.querySelectorAll('선택자들')
+            객체.setAttribute('속성','값') ~HTML 속성 설정 
+
+            HTML atrruput 
+            CSS property
+            get ~ : 반환 (가져오기)
+            set ~ : 설정(적용하기 )
+
+            매서드 체인
+            객체.메서드().메더스()...;
+
+            이벤트 종류 : click 
+            이벤트 핸들러 :on 
             return: 함수 호출문에 결괏값 반환하고 함수 종료
 
             함수 정의
@@ -28,22 +50,36 @@
                 }
 
             함수 호출
-                var 변수 = 함수명();
+                var 변수 = 함수명();// num 은 전역 변수 
         */
-
-        var num = 1;
+                /* 함수를 사용하여 이미지 갤러리 만들기
+                함수명 - gallery(direct)
+                변수 :num,imgTag
+                메서드 getElementById(),setAttribute()
+                제어문 if~else, if 
+                이미지명 : ../asset/pic_1.jpg ~ pic_10.jpg
+                */
+        //변수 
+        const imgTag = document.getElementById('photo')
+        let num = 1;
+        
+        // 함수 정의
         function gallery(direct) {
             if (direct) {
-                if (num == 8) return;
+                // 다음 버튼
+                if(num === 10) num = 0;
                 num++;
-            } else {
-                if (num == 1) return;
+                console.log(num);
+            }else {
+                //이전 버튼;
+                if(num === 1) num = 11;
                 num--;
+                console.log(num);
             }
-
-            var imgTag = document.getElementById('photo');
-            imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
+            imgTag.setAttribute('src' , '../assets/pic_' + num + '.jpg');
         }
+        
+         document.write(num);
     </script>
 </body>
 
