@@ -11,49 +11,44 @@
 <body>
     <h1>수학 객체</h1>
     <script>
-       /* 
-            Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
-            Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
-            Math.ceil(숫자): 소수점 첫째 자리에서 올림한 정수 반환
+        /*  
+            컴퓨터가 가위,바위, 보중 어떤 것을 내는지 맞춰 보세요.
+            변수 : game ,gameNum , com
+            메서드 : prompt(),ceil(),random(),write()
+            제어문 : switch, if~else 
+
+            입력 데이터를 잘못 작성했을 경우 메세지를 출력하고, 브라우저 새로고침한다.
        */
+        let gameNum = prompt('가위, 바위, 보 중 하나만 입력하세요.', '');
 
-        // 0 ~ 10 사이 난수
-        Math.random() * 10;
-
-        // 0 ~ 30 사이 임의 정수
-        Math.floor(Math.random() * 31)
-
-        // 120 ~ 150 사이 임의 정수
-        // Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값;
-        Math.floor(Math.random() * 31) + 120
-
-        document.write('<h2>컴퓨터 가위, 바위, 보 맞추기</h2>');
-
-        var game = prompt('가위, 바위, 보 중 쓰세요', '가위');
-        var gameNum;
-
-        switch (game) {
-            case '가위':
-                gameNum = 1; break;
-            case '바위':
-                gameNum = 2; break;
-            case '보':
-                gameNum = 3; break;
-            default: alert('잘못 작성했습니다.');
-            // 브라우저 새로고침
-            location.reload();
+        switch (gameNum) {
+            case '가위' :
+                gameNum =1;
+                break;
+            case '바위' :
+                gameNum =2;
+                break;
+            case '보' :
+                gameNum =3;
+                break;
+            default:
+                alert('가위,바위,보 셋 중 하나만 입력하세요.')
+                location.reload();
         }
-
-        var com = Math.ceil(Math.random() * 3);
-        document.write('<img src=\'../assets/math_img_' + com + '.jpg\'>');
-
-        if (gameNum == com) {
-            document.write('<img src=\'../assets/game_1.jpg\'>');
+        
+        // 1~3사이 정수
+        //Math.floor(Math.random() * (3) + 1)
+        let com = Math.floor(Math.random() * 3 ) +1;
+        document.write('<img src="../assets/math_img_1.jpg" alt="가위">','<br>');
+        if (gameNum === com) {
+            document.write('축하합니다. 맞추었습니다.');
         } else {
-            document.write('<img src=\'../assets/game_2.jpg\'>');
+            document.write('틀렸습니다. 다음기회에...')
         }
-
+        
+        
+    
     </script>
 </body>
-
+document.write('<h2>컴퓨터 가위, 바위, 보 맞추기</h2>');
 </html>
