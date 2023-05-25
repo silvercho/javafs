@@ -12,8 +12,8 @@
     <h1>문자열 객체</h1>
     <script>
         /* 
-             var 참조변수 = new String('문자열');
-             var 참조변수 = '문자열';
+            var 참조변수 = new String('문자열');
+            var 참조변수 = '문자열';
         */
 
         var s = new String('hello javascript');
@@ -24,8 +24,9 @@
             length: 문자열의 문자 총 개수 반환
         */
 
-        var userEmail = prompt('당신의 이메일 주소는?', '');
-        var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr'];
+        /* 
+            var userEmail = prompt('당신의 이메일 주소는?', '');
+        var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr','pe.kr'];
 
         var check1 = false;
         var check2 = false;
@@ -42,6 +43,43 @@
         } else {
             alert('이메일 형식이 잘못되었습니다.');
         }
+        */
+
+        /* 
+            이메일 주소를 입력받아 유효성 검사를 해보자.
+            형식 : ID@naver.com
+            변수 : userEmail, arrUrl,chk1 , chk2
+            제어문 : if , if~ else, for
+            메서드 : prompt(), indexOf(),alert(), write()
+            속성 :length
+        */
+
+        // 변수 선언 
+        let chk1 = false, chk2 = true;
+        const arrUrl = ['.com', '.co.kr', '.net', '.or.kr', '.go.kr'];
+        // 입력 
+        const userEmail = prompt('이메일 주소를 입력하세요.')
+
+        // 처리
+        // @있으면 0이상 정수로 표시 , 없으면 -1
+        if (userEmail.indexOf('@') >0) {
+            chk1 = true;
+        } 
+        // chk2 변수에 .com, .co.kr ,...이있으면 true ,없으면 false 
+        for (let i =0; i <=arrUrl.length; i++){
+            if (userEmail.indexOf(arrUrl[i])>0){
+                chk2 = true;
+            }
+        }
+        
+        // 출력 
+        if (chk1 && chk2) {
+            document.write(userEmail);
+        } else {
+            alert('잘못 입력하셨습니다.');
+            location.reload();
+        }
+
 
     </script>
 </body>
