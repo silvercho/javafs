@@ -197,8 +197,6 @@ footer i {
         margin-left: 36px;
     }
 
-    /* 메인 타이틀 */
-
     /* 섹션2~4 공통 */
     .section ul {
         display: flex;
@@ -220,6 +218,10 @@ footer i {
     /* 섹션4 */
     #news .map {
         height: 400px;
+    }
+    /* 푸터 */
+    footer {
+        
     }
 }
 
@@ -246,11 +248,4 @@ footer i {
         height: 845px;
     }
 
-    /* 푸터 */
-    footer span:nth-of-type(1), footer span:nth-of-type(3) {
-        display: inline-block;
     }
-    footer span:nth-of-type(2) {
-        display: none;
-    }
-}
