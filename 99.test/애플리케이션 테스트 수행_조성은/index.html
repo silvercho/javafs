@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애플리케이션 테스트 수행_조성은</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100;400;700&display=swap') ;
+
+          /* 초기화 */
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 공통 */
+        html { font-size: 10px;
+        }
+        li {list-style: none;}
+        a {text-decoration: none; color: #333;}
+        body {
+            background: #fff;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+        /* 레이아웃 */
+        header {background: #fff}
+        nav {
+            height: 40px; 
+            background:#CEB2E5}
+        footer {
+            font-family: 'Libre Baskerville', serif;
+            background: #CEB2E5;}
+        .slide {
+            width: 100%; height: 500px;}
+
+        /* 헤더 */
+        header {
+            display: flex;
+            justify-content: center;
+            height: 200px;
+        }
+        header img{
+            height: 150px;
+            margin: 25px ;
+        }
+        /* nav */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1000;
+        }
+        /* 1depth */
+        nav li {
+        width :200px;
+        text-align: center;
+        }
+
+        .main > li {
+        height: 40px;
+        background: #CEB2E5;
+        text-align: center;
+    }
+    .main > li > a {
+        display: block;
+        line-height: 40px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        transition: .3s;
+    }
+    .main > li > a:hover {
+        background: #FFC4D4; 
+    }
+    .main > li > a:hover + .sub{
+        display: block;
+    }
+    /* 2depth */
+    .sub {
+        display: none;
+        padding: 10px 0 20px 0;
+        background: rgba(255,0,0,0.3);
+        
+    }
+    .sub li {
+        padding: 4px;
+    }
+    .sub span {
+        visibility: hidden;
+    }
+    .sub a {
+        padding: 4px 8px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    .sub a:hover {
+        background: #C690AD;
+        color: #fff;
+    }
+        /* 슬라이드 */
+        .slide {
+            position: relative;
+            width: 100%;
+            height: 500px; overflow:hidden;
+        }
+        .slide h2 {
+            z-index: 100;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+            font-size: 400%;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .slide ul {
+            position: relative;
+            left:0; top:0;
+            display: flex;
+            width: 400%;
+            animation: slide 15s infinite;
+        }
+        .slide li {
+            max-width: 100%;
+            height: auto;
+            align-items: center;
+        }
+            
+
+        /* 애니메이션 키프레임 */
+        @keyframes slide {
+        0% {left: 0;}
+        5% {left: 0;}
+        15% {left: 0;}
+        30% {left: -100%;}
+        33% {left: -100%;}
+        38% {left: -100%;}
+        50% {left: -200%;}
+        66% {left: -200%;}
+        80% {left: -300%;}
+        99.99% {left: -300%;}
+        100%{left: 0%;}
+}
+
+    /* 푸터 */
+    footer {
+        color: #fff;
+        font-size: large;
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><img src="images/logo.png" alt="로고"></h1>
+        </header>
+        <nav id="gnb">
+            <ul class="main">
+                <li>
+                    <a href="#">축제소개</a>
+                    <ul class="sub">
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
+                        <li><span>숨김처리</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">예약안내</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+                        <li><span>숨김처리</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">아티스트</a>
+                    <ul class="sub">
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">사진갤러리</a></li>
+                        <li><a href="#">영상갤러리</a></li>
+                        <li><span>숨김처리</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="slide">
+            <h2>Valley Festival</h2>
+            <ul>
+                <li><img src="images/slide1.jpg" alt="슬라이드1"></li>
+                <li><img src="images/slide2.jpg" alt="슬라이드2"></li>
+                <li><img src="images/slide3.jpg" alt="슬라이드3"></li>
+                <li><img src="images/slide1.jpg" alt="슬라이드1"></li>
+            </ul>
+        </div>
+        <footer>
+            <p>Copyright 2023 Valley Festival.All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- 제이쿼리 라이브 러리  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.main > li').mouseenter(function(){
+                $('.sub').stop().slideDown();
+            });
+            $('.main > li').mouseleave(function(){
+                $('.sub').stop().slideUp();
+            });
+        });
+    </script>
+</body>
+</html>
