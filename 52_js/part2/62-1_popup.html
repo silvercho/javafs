@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>윈도우 팝업창</h1>
+    <p>문서를 열면 팝업 창이 표시됩니다</p>
+    <script>
+
+        /* 
+            window.maveBy(x,y) ~ 창의 x위치 , y위치로 이동 
+        */
+        var newWin = window.open("62_notice.html", "pop", "width=500, height=400");
+        if (newWin == null) {
+            alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.")
+        }
+        newWin.moveBy(100, 100);	
+    </script>
+
+</body>
+
+</html>

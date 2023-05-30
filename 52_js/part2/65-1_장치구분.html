@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>브라우저와 운영체제 정보</h1>
+
+    <script>
+        /* 
+            // Dom Tree 구조 
+            pareantNode , Node ,childNdodes , siblingsNode(형제)
+            firstchild , previousNode , NextNode, lastchild , 
+
+            navigator.userAgent;
+                - 기본 플랫폼
+                - 운영체제 정보
+                - 사용중인 브라우저의 엔진 이름
+                - 사용 중인 브라우저 이름
+                - 같은 엔진을 사용 중이며 호환 가능한 다른 브라우저
+
+                요소.indexOf('문자열')~ 색인번호, 찾는 문자열이 없으면 -1
+
+                적응형
+                www.naver.com ~데스크탑 
+                m.naver.com ~ 모바일 
+        */
+        const ua = navigator.userAgent.toLocaleLowerCase();
+
+        if (ua.indexOf('android')>0 || ua.indexOf('iphone')>0){
+            location.href = 'https://m.naver.com';
+        } else {
+            location.href = 'https://naver.com';
+        }
+
+    </script>
+</body>
+
+</html>

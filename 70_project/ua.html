@@ -30,14 +30,10 @@
                 - 사용 중인 브라우저 이름
                 - 같은 엔진을 사용 중이며 호환 가능한 다른 브라우저
 
-                요소.indexOf('문자열')~ 색인번호, 찾는 문자열이 없으면 -1
-
-                적응형
-                www.naver.com ~데스크탑 
-                m.naver.com ~ 모바일 
+            요소.indexOf('문자열')~ 색인번호
         */
-
         console.log(navigator.userAgent);
+
         var info = navigator.userAgent.toLowerCase();
         var osImg = null;
 
@@ -51,7 +47,7 @@
             osImg = 'android.png';
         }
 
-        document.write('<img src=\'../assets/' + osImg + '\'>', '<br>');
+        document.write('<img src="assets/' + osImg + '">', '<br>');
 
         var scr = screen;
         var sc_w = scr.width;
