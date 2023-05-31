@@ -26,22 +26,16 @@
     <button class="btn">이미지 속성 확인하기</button>
     <p class="frame"><img src="../assets/pic_1.jpg" alt="이미지1"></p>
 
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+
     <script>
-        /* 
-            요소.getAttribute('속성명') ~ HTML 속성 반환
-        */
-        /* 
-            '이미지 속성 확인하기' 버튼 클릭하면 
-            img 태그의 src 속성값을 경고창으로 출력하시오.
 
-            메서드 : getAttribute = attr(HTML속성명);
-        */
+        const btn = $('.btn');
+        const imgTag = $('img');
 
-        const btn = document.querySelector('.btn');
-        const imgTag = document.querySelector('img');
-
-        btn.onclick = function(){
-            alert(imgTag.getAttribute('src'));
+        btn.click = function(){
+            alert(imgTag.attr('src'));
         };
     </script>
 </body>

@@ -33,6 +33,9 @@
 
     <div></div>
 
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+
     <script>
         /* 
             var 변수 =요소.textContent; ~ 문자열 반환
@@ -41,17 +44,17 @@
         
         // 목록의 텍스트 (색상이름)을 클릭하면 아래 회색 박스에 해당 색상이름과 같은 색의 박스가 나타남 . 
 
-        const liTag = document.querySelectorAll('li');
-        const divTag = document.querySelector('div');
+        const liTag = $('li');
+        const divTag = $('div');
 
-        for (let i = 0; i <liTag.length; i++) {
-            //i = 0,1,2,3
-            liTag[i].onclick = function(){
-            let txt = liTag[i].innerText;
-            divTag.innerText = txt;
-            divTag.style.background = txt;
+            liTag.click(bgFn);
+                        
+            function bgFn(){
+            let txt = $(this).text();
+            divTag.html(txt);
+            divTag.css({backgroundColor: txt;});
         }
-}
+
     </script>
 </body>
 

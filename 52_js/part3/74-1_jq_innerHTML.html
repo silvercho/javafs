@@ -24,6 +24,8 @@
         <span>변경전 입니다.</span>
     </div>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+
     <script>
         /* 
             객체.속성; -> 반환(가져오기)
@@ -42,15 +44,15 @@
             요소.html(값); 
         */
 
-        const btn = document.querySelector('button');
-        const box = document.querySelector('div');
+        const btn = $('button');
+        const box = $('div');
 
-        btn.onclik = function(){
+        btn.clik = function(){
             box.innerHTML ='<h1>변경 후 입니다.</h1>';
         }
-        box.onclick = function(){
-            let abc = this.innerHTML;
-            alert(abc);
+        box.click = function(){
+            let txt = this.innerHTML;
+            alert(txt);
         }
     </script>
 </body>

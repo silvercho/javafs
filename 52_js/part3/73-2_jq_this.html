@@ -20,38 +20,36 @@
         <li>목록2</li>
         <li>목록3</li>
         <li>목록4</li>
-    
     </ul>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+
 
     <script>
-        /* 
-            this ~ 이벤트를 발생시킨 주체
-
-            
-        */
-
         /*
         4개의 목록 중에 하나를 클릭하면 클릭한 목록의 글자색을 빨강으로 지정
             나머지는 파랑으로지정-> 하나를 빨강으로 지정하기 전에 모두 파랑으로 지정하고 (초기화), 선택한 요소를 빨강으로 지정한다. 
 
-            제어문 :for
-            키워드 : this 
+            $(this) ~ 이벤트를 발생시킨 주체
         */
-    
-        const liTag = document.querySelectorAll('li');
+        //document.querySelectorAll -> $
+        /*  const liTag = $('li');
 
-        for (let i = 0; i < liTag.length; i++) {
-            liTag[i].onclick = function () {
-                for(let j=0; j< liTag.length;j++){
-                    liTag[j].style.color = 'blue'
-                }
-                this.style.color = 'red';
-            };
-        }
+        liTag.click(function(){
+                $(this).css({color: 'red'});
+            }); */
+        /*    const liTag = $('li');
+        liTag.click(function () {
+            liTag.not($(this)).css({color: 'blue'});
+            $(this).css({ color:'red'});
+        }); */
+        
+        const liTag = $('li');
+        liTag.click(function(){
 
-        /*  liTag[0].onclick = function(){
-                this.style.color = 'red';
-        };
+        $(liTag).not('this').css({color:'blue'});
+        $(this).css({ color: 'red' });
+        });
+
          */
     </script>
 </body>
