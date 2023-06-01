@@ -53,39 +53,21 @@
     </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
     <script>
-        /*
-            요소.setAttribute('속성명', '값') ~ HTML 속성 설정
-        */
-        /* 
-            썸네일 이미지를 클릭하면
-            위에 큰 이미지가 클릭한 썸네일 이미지와 같은 이미지로 표시되도록 하시오. 
 
-            선택자 : #pic(큰이미지) , .small(작은이미지)
-            함수 : gallery
-        */
+        const bigImg = $('#pic');
+        const thumbImg = $('.small');
+        
+        $('.small').click(function() {
+            let imgSrc = $(this).attr('src');
+            $('#pic').attr('src',imgSrc);
+        });
 
         
-        const bigImg = document.querySelector('#pic')
-        const thumbImg = document.querySelectorAll('.small')
 
-        let gallery = function(){
-            let imgSrc = this.getAttribute('src');
-            bigImg.setAttribute('src',imgSrc);
-        }
-        
-        for(let i=0; i < thumbImg.length; i++){
-            thumbImg[i].onclick = gallery;}
-
-            
-        /* for(let i=0; i < thumbImg.length; i++){
-            thumbImg[i].onclick = function (){
-            let imgSrc = thumbImg[i].getAttribute('src');
-            bigImg.setAttribute('src',imgSrc);
-        };
-        } */
-        
-        
 
     </script>
 </body>

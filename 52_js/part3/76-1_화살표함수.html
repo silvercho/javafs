@@ -69,21 +69,14 @@
         const bigImg = document.querySelector('#pic')
         const thumbImg = document.querySelectorAll('.small')
 
-        let gallery = function(){
-            let imgSrc = this.getAttribute('src');
+        let gallery = (e) => {
+            let imgSrc = e.target.getAttribute('src');
             bigImg.setAttribute('src',imgSrc);
         }
         
         for(let i=0; i < thumbImg.length; i++){
             thumbImg[i].onclick = gallery;}
 
-            
-        /* for(let i=0; i < thumbImg.length; i++){
-            thumbImg[i].onclick = function (){
-            let imgSrc = thumbImg[i].getAttribute('src');
-            bigImg.setAttribute('src',imgSrc);
-        };
-        } */
         
         
 

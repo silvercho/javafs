@@ -62,6 +62,9 @@
         <img src="../assets/thumb_pic1.png" alt="" id="lightboxImage">
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+
     <script>
         /*
             요소.getAttribute('속성명') ~ HTML 속성 반환
@@ -75,24 +78,25 @@
                 -lightbox (모달 창)
                 -lightboxImg (모달 창)
                 -imgs(썸네일 이미지)
+            이벤트 click 
+            메서드 : attr() , find() ,css()
+            사용자 정의 함수 : showLightbox()
         */
-        const imgs = document.querySelectorAll('.pic');
-        const lightbox = document.querySelector('#lightbox');
-        const lightboxImg = document.querySelector('#lightboxImage');
+        const imgs = $('.pic');
+        const lightbox = lightbox.find('#lightbox');
+        const lightboxImg = $('#lightboxImage');
 
-        for (let i=0; i< imgs.length; i++){
-            imgs[i].onclick = showLightbox;
-            }
+            imgs.click(showLightbox);
         
             function showLightbox(){
-                let dataSrc = this.getAttribute('data-src');
-                lightboxImg.setAttribute('src', dataSrc);
-                lightbox.style.display = 'block';
+                let dataSrc = $(this).attr('data-src');
+                lightboxImg.attr('src', dataSrc);
+                lightbox.css({display: 'block'});
             }
 
-            lightbox.onclick = function () {
-                lightbox.style.display = 'none';
-        }
+            lightbox.click(function (){
+                $(this).css({display: 'none'});
+        });
 
     
 
