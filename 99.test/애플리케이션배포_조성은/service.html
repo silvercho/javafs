@@ -47,9 +47,10 @@
             color: #fff;
         }
             /* 가입하기 버튼  */
-        #member {
+            #member {
+            position: absolute;
+            left:0;
             width: 100%;
-            bottom: 30px;
             font-size: 1.5rem;
             color: #777;
         }
@@ -100,7 +101,7 @@
         document.write('<img src="images/card_img_' + com + '.png" alt="하트"><br>');
         
         if (gameNum === com) {
-            result.innerHTML = '<p><span>축하합니다. 1만골드 당첨!</span></p>';
+            result.innerHTML = '<p><span>축하합니다.<br>1만골드 당첨!</span></p>';
         } else {
             result.innerHTML = '<p>틀렸습니다. 다음 기회에...</p>';
         }
