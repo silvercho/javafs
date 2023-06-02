@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +9,56 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100;400;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100;400;700&display=swap') ;
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
-          /* 초기화 */
+        /* 초기화 */
         * {
-            margin:0;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         /* 공통 */
-        html { font-size: 10px;
+        html {
+            font-size: 10px;
         }
-        li {list-style: none;}
-        a {text-decoration: none; color: #333;}
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
         body {
             background: #fff;
+            color: #000;
             font-family: 'Noto Sans KR', sans-serif;
             font-size: 1.5rem;
             line-height: 1.8;
         }
+
         /* 레이아웃 */
-        header {background: #fff}
+        header {
+            background: #fff
+        }
+
         nav {
-            height: 40px; 
-            background:#CEB2E5}
+            height: 40px;
+            background: #CEB2E5
+        }
+
         footer {
             font-family: 'Libre Baskerville', serif;
-            background: #CEB2E5;}
+            background: #CEB2E5;
+        }
+
         .slide {
-            width: 100%; height: 500px;}
+            width: 100%;
+            height: 500px;
+        }
 
         /* 헤더 */
         header {
@@ -44,10 +66,12 @@
             justify-content: center;
             height: 200px;
         }
-        header img{
+
+        header img {
             height: 150px;
-            margin: 25px ;
+            margin: 25px;
         }
+
         /* nav */
         nav ul {
             display: flex;
@@ -55,106 +79,145 @@
             position: relative;
             z-index: 1000;
         }
+
         /* 1depth */
         nav li {
-        width :200px;
-        text-align: center;
+            width: 200px;
+            text-align: center;
         }
 
-        .main > li {
-        height: 40px;
-        background: #CEB2E5;
-        text-align: center;
-    }
-    .main > li > a {
-        display: block;
-        line-height: 40px;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #fff;
-        transition: .3s;
-    }
-    .main > li > a:hover {
-        background: #FFC4D4; 
-    }
-    .main > li > a:hover + .sub{
-        display: block;
-    }
-    /* 2depth */
-    .sub {
-        display: none;
-        padding: 10px 0 20px 0;
-        background: rgba(255,0,0,0.3);
-        
-    }
-    .sub li {
-        padding: 4px;
-    }
-    .sub span {
-        visibility: hidden;
-    }
-    .sub a {
-        padding: 4px 8px;
-        font-size: 1.6rem;
-        font-weight: bold;
-        color: #fff;
-    }
-    .sub a:hover {
-        background: #C690AD;
-        color: #fff;
-    }
+        .main>li {
+            height: 40px;
+            background: #CEB2E5;
+            text-align: center;
+        }
+
+        .main>li>a {
+            display: block;
+            line-height: 40px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            transition: .3s;
+        }
+
+        .main>li>a:hover {
+            background: #FFC4D4;
+        }
+
+        .main>li>a:hover+.sub {
+            display: block;
+        }
+
+        /* 2depth */
+        .sub {
+            display: none;
+            padding: 10px 0 20px 0;
+            background: rgba(255, 0, 0, 0.3);
+
+        }
+
+        .sub li {
+            padding: 4px;
+        }
+
+        .sub span {
+            visibility: hidden;
+        }
+
+        .sub a {
+            padding: 4px 8px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .sub a:hover {
+            background: #C690AD;
+            color: #fff;
+        }
+
         /* 슬라이드 */
         .slide {
             position: relative;
             width: 100%;
-            height: 500px; overflow:hidden;
+            height: 500px;
+            overflow: hidden;
         }
+
         .slide h2 {
             z-index: 100;
             position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             color: #fff;
             font-size: 400%;
             font-weight: bold;
             text-shadow: 1px 1px 3px #000;
         }
+
         .slide ul {
             position: relative;
-            left:0; top:0;
+            left: 0;
+            top: 0;
             display: flex;
             width: 400%;
             animation: slide 15s infinite;
         }
+
         .slide li {
             max-width: 100%;
             height: auto;
             align-items: center;
         }
-            
+
 
         /* 애니메이션 키프레임 */
         @keyframes slide {
-            0% {left:0;}
-            5% {left:-100%;}
-            33% {left:-100%;}
-            38% {left:-200%;}
-            66% {left:-200%;}
-            71% {left:-300%;}
-            99.99% {left:-300%;}
-            100% {left:0;}
+            0% {
+                left: 0;
+            }
+
+            5% {
+                left: -100%;
+            }
+
+            33% {
+                left: -100%;
+            }
+
+            38% {
+                left: -200%;
+            }
+
+            66% {
+                left: -200%;
+            }
+
+            71% {
+                left: -300%;
+            }
+
+            99.99% {
+                left: -300%;
+            }
+
+            100% {
+                left: 0;
+            }
         }
 
-    /* 푸터 */
-    footer {
-        color: #fff;
-        font-size: large;
-        text-align: center;
-        padding: 40px 0;
-    }
-    
+        /* 푸터 */
+        footer {
+            color: #fff;
+            font-size: large;
+            text-align: center;
+            padding: 40px 0;
+        }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <header>
@@ -216,14 +279,15 @@
     <!-- 제이쿼리 라이브 러리  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-        $(function(){
-            $('.main > li').mouseenter(function(){
+        $(function () {
+            $('.main > li').mouseenter(function () {
                 $('.sub').stop().slideDown();
             });
-            $('.main > li').mouseleave(function(){
+            $('.main > li').mouseleave(function () {
                 $('.sub').stop().slideUp();
             });
-        });(jQuery);
+        }); (jQuery);
     </script>
 </body>
+
 </html>
