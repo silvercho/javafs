@@ -20,18 +20,22 @@ li {
 /* header */
 header {
     position: fixed;
+    z-index: 99999;
     top: 0;
     width: 100%;
-    z-index: 99999;
     height: 54px;
     padding: 0 32px;
-    background: #777;
+    border: 1px solid red;
 }
 .logo {
-    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 nav {
-    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 nav li {
     display: inline-block;
@@ -40,7 +44,7 @@ nav li {
 /* section common */
 section {
     width: 1496px;
-    margin: 0 auto;
+    margin-top: 54px; 
 }
 .section {
     padding-top: 81px;
