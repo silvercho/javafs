@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        #prod-pic {
+            margin: 20px 20px auto 10px;
+            padding: 0;
+        }
+
+        #pic {
+            width: 200px;
+            box-shadow: 1px 1px 2px #eee;
+            outline: 1px dashed #ccc;
+            outline-offset: -7px;
+        }
+
+        #small-pic {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        #small-pic>li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .small {
+            width: 60px;
+            height: 60px;
+        }
+
+        #small-pic img:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="prod-pic">
+        <img src="../assets/pic_1.jpg" alt="커피" id="pic" height="200">
+        <div id="small-pic">
+            <img src="../assets/pic_2.jpg" class="small">
+            <img src="../assets/pic_3.jpg" class="small">
+            <img src="../assets/pic_4.jpg" class="small">
+        </div>
+    </div>
+
+
+    <script>
+        /*
+            요소.setAttribute('속성명', '값') ~ HTML 속성 설정
+        */
+        /* 
+            썸네일 이미지를 클릭하면
+            위에 큰 이미지가 클릭한 썸네일 이미지와 같은 이미지로 표시되도록 하시오. 
+
+            선택자 : #pic(큰이미지) , .small(작은이미지)
+            함수 : gallery
+        */
+
+        
+        const bigImg = document.querySelector('#pic')
+        const thumbImg = document.querySelectorAll('.small')
+
+        let gallery = function(){
+            let imgSrc = this.getAttribute('src');
+            bigImg.setAttribute('src',imgSrc);
+        }
+        
+        for(let i=0; i < thumbImg.length; i++){
+            thumbImg[i].onclick = gallery;}
+
+            
+        /* for(let i=0; i < thumbImg.length; i++){
+            thumbImg[i].onclick = function (){
+            let imgSrc = thumbImg[i].getAttribute('src');
+            bigImg.setAttribute('src',imgSrc);
+        };
+        } */
+        
+        
+
+    </script>
+</body>
+
+</html>

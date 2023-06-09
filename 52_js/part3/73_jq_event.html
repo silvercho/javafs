@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            font-size: 50px;
+            color: #fff;
+        }
+        .box1 {
+            background: red;
+        }
+        .box2 {
+            background: blue;
+        }
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <p></p>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /*
+            $('선택자').이벤트명(function(){});
+            $('선택자').on('이벤트명',function(){});
+
+            요소.innerText = 값;
+            $('선택자').text(값);
+        */
+            // .box을 클릭하면 함수를 호출한다.
+            const box1 = $('.box1');
+            const box2 = $('.box2');
+            const pTag = $('p');
+
+            box1.click(function(){
+                pTag.text('box1을 클릭 했습니다.');
+            });
+
+            box1.on('mouseenter',ev);
+            function ev(){
+                pTag.text('box1에 마우스를 올렸습니다.');
+            };
+
+            box1.on('mouseleave',function(){
+                pTag.text('box1에서 마우스가 벗어났습니다.');
+            });
+
+            box2.on('mousemove',function(){
+                pTag.text('box2에서 마우스가 움직입니다.');
+            });
+            
+            $(window).on('scroll', function(){
+                pTag.text('창이 스크롤 되었습니다.');
+            });
+
+            $(window).on('resize', function(){
+                pTag.text('창이 크기조정 되었습니다.');
+            });
+
+    </script>
+</body>
+
+</html>

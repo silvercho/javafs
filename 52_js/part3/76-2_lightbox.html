@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .row {
+            width: 371px;
+            margin: 0 auto;
+        }
+
+        .row ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #lightbox {
+            position: fixed;
+            /* width: 100%;
+            height: 100%; */
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+        }
+
+        #lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <!-- data-사용자 정의속성 * -->
+        <ul>
+            <li><img src="../assets/thumb_pic1.png" data-src="../assets/pic1.jpg" class="pic"></li>
+            <li><img src="../assets/thumb_pic2.png" data-src="../assets/pic2.jpg" class="pic"></li>
+            <li><img src="../assets/thumb_pic3.png" data-src="../assets/pic3.jpg" class="pic"></li>
+            <li><img src="../assets/thumb_pic4.png" data-src="../assets/pic4.jpg" class="pic"></li>
+            <li><img src="../assets/thumb_pic5.png" data-src="../assets/pic5.jpg" class="pic"></li>
+            <li><img src="../assets/thumb_pic6.png" data-src="../assets/pic6.jpg" class="pic"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="../assets/thumb_pic1.png" alt="" id="lightboxImage">
+    </div>
+
+    <script>
+        /*
+            요소.getAttribute('속성명') ~ HTML 속성 반환
+            요소.setAttribute('속성명', '값') ~ HTML 속성 설정
+        */
+        /* 
+            썸네일 이미지를 클릭하면 해당 이미지의 큰 이미지가 모달 팝업 형식으로 나타나도록 하시오.
+            모달 팝업 창 임의 영역을 클릭하면 팝업 창 이 닫히게 된다.
+
+            객체변수 :
+                -lightbox (모달 창)
+                -lightboxImg (모달 창)
+                -imgs(썸네일 이미지)
+        */
+        const imgs = document.querySelectorAll('.pic');
+        const lightbox = document.querySelector('#lightbox');
+        const lightboxImg = document.querySelector('#lightboxImage');
+
+        for (let i=0; i< imgs.length; i++){
+            imgs[i].onclick = showLightbox;
+            }
+        
+            function showLightbox(){
+                let dataSrc = this.getAttribute('data-src');
+                lightboxImg.setAttribute('src', dataSrc);
+                lightbox.style.display = 'block';
+            }
+
+            lightbox.onclick = function () {
+                lightbox.style.display = 'none';
+        }
+
+    
+
+
+    </script>
+</body>
+
+</html>

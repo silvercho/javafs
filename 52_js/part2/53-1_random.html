@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>수학 객체</h1>
+    <script>
+        /* 
+            Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
+            Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
+            Math.ceil(숫자): 소수점 첫째 자리에서 올림한 정수 반환
+       */
+        //0 <= x < 1
+        document.write('0~1사이 난수' + Math.random());
+        document.write('<br>')
+        
+        // 0~10 사이 난수 
+        // 0 <= x < 11 사이 난수 
+        Math.random() * 11;
+        document.write('0~10 사이 난수' + Math.random()* 11 );
+        document.write('<br>')
+
+        // 0 ~ 30 사이 임의 정수
+        // 0 <= x < 31
+        Math.floor(Math.random() * 31)
+        document.write('0~30 사이 임의 정수:' + Math.floor(Math.random()* 31 ));
+        document.write('<br>')
+
+        // 120 ~ 150 사이 임의 정수
+        // 120 <= x < 150
+        // 0 *30+120 <=x < 1*30+120
+        // Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값;
+        // Math.floor(Math.random() * (150 - 120 + 1)) + 120;
+        Math.floor(Math.random() * 31) + 120
+        document.write('120~150 사이 임의 정수=' + (Math.floor(Math.random()*31)+120));
+
+        // -10~10 사이의 임의 정수?
+        // -10 <= x < 11
+        
+        Math.floor(Math.random()*21) -10;
+        document.write('<h2>컴퓨터 가위, 바위, 보 맞추기</h2>');
+
+    </script>
+</body>
+
+</html>

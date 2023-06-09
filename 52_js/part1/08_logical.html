@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <script>
+        /* 
+            논리 연산자: 
+                ||(or,또는), 
+                &&(and,그리고), 
+                !(not,아니다)
+            
+            논리 연산의 결과는 true 또는 false이다. 
+            
+
+            true || true -> true
+            true || false -> true
+            false || true -> true
+            false || false -> false
+
+            false || false || false || false || true -> true
+            
+
+            true && true -> true
+            true && false -> false
+            false && true -> false
+            false && false -> false
+
+            false && false && false && false && true -> false
+
+            연산자의 우선순위
+            1. ()
+            2. 산술
+            3. 비교
+            4. 논리
+            5. 대입(할당)
+
+            연산자의 우선순위
+            18. ()
+            15. 산술(증감): ++, --
+            14. 논리: !
+            14. typeof
+            13. 산술: **
+            12. 산술: *, /, %
+            11. 산술: +, -
+            09. 비교: >, < , >=, <=
+            08. 비교: ==, !=, ===, !==
+            04. 논리: &&
+            03. 논리: ||
+            02. 대입(할당): =, +=, -=, *=, /=, %=, **=
+            02. 삼항(조건): ? :
+            * 왼쪽에서 오른쪽 방향으로 계산
+
+            우선순위 참고: https://www.w3schools.com/js/js_precedence.asp 
+        */
+
+        var a = 10;
+        var b = 20;
+        var c = 30;
+        var d = 40;
+        var result;
+
+        result = a > b || b >= c || c > d
+        document.write(result, '<br>');
+
+        result = a > b || b >= c || c <= d
+        document.write(result, '<br>');
+
+        result = a <= b && b >= c && c <= d
+        document.write(result, '<br>');
+
+        result = a <= b && b <= c && c <= d
+        document.write(result, '<br><br>');
+
+        result = !(a < b);
+        document.write(result, '<br>');
+        document.write('1.'+!true, '<br>');
+        document.write('2.'+!10, '<br>');
+        document.write('3.'+!0, '<br>');
+        document.write('4.'+!null, '<br>');
+        document.write('5.'+!undefined, '<br>');
+        document.write('6.'+!'', '<br>');
+        document.write('7.'+!false, '<br>');
+        // 산술 연산에서 false는 0, true 는 1이다. 
+        document.write(false + true + true, '<br>');
+        document.write(true - true + true , '<br>');
+        
+    </script>
+</body>
+
+</html>

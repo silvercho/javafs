@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        button {
+            margin: 10px;
+        }
+        .frame {
+            width: 600px;
+            border: 2px solid red;
+            margin: 10px;
+        }
+        .frame img {
+            width: 100%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn1">이미지 속성 변경하기1</button>
+    <button class="btn2">이미지 속성 변경하기2</button>
+    <p class="frame"><img src="../assets/pic_1.jpg" alt="이미지1"></p>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <script>
+        /* 
+            요소.css('속성') ~ css 속성 값 반환
+            요소.css('속성', '값') ~ css 속성 값 반환
+            요소.css({'속성': '값','속성명': '값',...}) ~ css 속성 값 반환
+
+            요소.attr('속성') ~ HTML 속성 값 반환
+            요소.attr('속성', '값') ~ HTML 속성을 값으로 설정
+            요소.attr({'속성': '값','속성명': '값',...}) ~ HTML 속성 값 반환
+        */
+        /* 
+            2개 버튼 중 하나를 누르면 서로 다른 이미지가 아래 영역에 나타나도록 하시오. 
+        */
+        //변수
+        const btn1 = $('.btn1');
+        const btn2 = $('.btn2');
+        const imgTag = $('img');
+
+        //이벤트 설정
+        btn1.click(pic1);
+        btn2.click(pic2);
+
+        //함수 정의
+        function pic1() {
+            //객체.attr({속성: 값,속성: 값, ...});
+            imgTag.attr({src:'../assets/pic_1.jpg', alt: '이미지1'});
+        }
+        function pic2() {
+            imgTag.attr('src','../assets/pic_2.jpg');
+            imgTag.attr('alt','이미지2');
+        }
+    </script>
+</body>
+
+</html>

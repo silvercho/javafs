@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          /* 초기화 */
+        *{margin:0;padding: 0;box-sizing: border-box;}
+        html { font-size: 10px;}
+        li {list-style: none;}
+        a {text-decoration: none; color: #333;}
+        body {font: 1.5rem sans-serif;}
+        /* 레이아웃 */
+        #wrap {width: 1200px;}
+        header {background: #999;}
+        nav {height: 40px; background:#845EC2}
+        footer {background: #555;}
+        img {width: 1200px; height: 300px;}
+        /* 헤더 */
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        /* GNB */
+        nav {
+            position: relative;
+            z-index: 1000;
+        }
+        /* 1depth */
+        .main > li {
+        float: left;
+        width: 160px;
+        height: 40px;
+        background: #845EC2;
+        text-align: center;
+    }
+    .main > li > a {
+        display: block;
+        line-height: 40px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #fff;
+        transition: .3s;
+    }
+
+    .main > li > a:hover + .sub {
+        display: block;
+    }
+    /* 2depth */
+    .sub {
+        display: none;
+        padding: 10px 0 20px 0;
+    }
+    .sub a {
+        padding: 4px 8px;
+        font-size: 1.4rem;
+    }
+    .sub a:hover {
+        background: #D65DB1;
+        color: #fff;
+        transition: .3s;
+    }
+        /* 슬라이드 */
+        .slide {
+            position: relative;
+            width: 1200px; height: 300px; overflow:hidden;
+        }
+        .slide h2 {
+            z-index: 100;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+            font-size: 5rem;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .slide ul {
+            position: relative;
+            left:0; top:0;
+            height: 400%;
+            animation: slide 9s infinite;
+        }
+        .slide li {width: 1200px; height: 300px;}
+
+        /* 애니메이션 키프레임 */
+        @keyframes slide {
+            0% {top:0;}
+            5% {top:-100%;}
+            33% {top:-100%;}
+            38% {top:-200%;}
+            66% {top:-200%;}
+            71% {top:-300%;}
+            99.99% {top:-300%;}
+            100% {top:0;}
+        }
+
+    /* 푸터 */
+    footer {
+        color: #fff;
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#">Travel</a></h1>
+        </header>
+        <nav id="gnb">
+            <ul class="main">
+                <li>
+                    <a href="#">메인메뉴1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1메뉴1</a></li>
+                        <li><a href="#">서브1메뉴2</a></li>
+                        <li><a href="#">서브1메뉴3</a></li>
+                        <li><a href="#">서브1메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브2메뉴1</a></li>
+                        <li><a href="#">서브2메뉴2</a></li>
+                        <li><a href="#">서브2메뉴3</a></li>
+                        <li><a href="#">서브2메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브3메뉴1</a></li>
+                        <li><a href="#">서브3메뉴2</a></li>
+                        <li><a href="#">서브3메뉴3</a></li>
+                        <li><a href="#">서브3메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브4메뉴1</a></li>
+                        <li><a href="#">서브4메뉴2</a></li>
+                        <li><a href="#">서브4메뉴3</a></li>
+                        <li><a href="#">서브4메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="slide">
+            <h2>메인 타이틀</h2>
+            <ul>
+                <li><img src="../assets/slide1.jpg" alt="슬라이드1"></li>
+                <li><img src="../assets/slide2.jpg" alt="슬라이드2"></li>
+                <li><img src="../assets/slide3.jpg" alt="슬라이드3"></li>
+                <li><img src="../assets/slide1.jpg" alt="슬라이드1"></li>
+            </ul>
+        </div>
+        <footer>
+            <p>Copyright 2023 이탈리아.All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- 제이쿼리 라이브 러리  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.main > li').mouseenter(function(){
+                $('.sub').stop().slideDown();
+            });
+            $('.main > li').mouseleave(function(){
+                $('.sub').stop().slideUp();
+            });
+        });
+    </script>
+</body>
+</html>

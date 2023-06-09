@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    background: #fff;
+}
+a {
+    color: #000;
+}
+/* 목록의 마커 제거 */
+li {
+    list-style: none;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    height: 54px;
+    padding: 0 32px;
+    background: #777;
+}
+.logo {
+    float: left;
+}
+nav {
+    float: right;
+}
+nav li {
+    display: inline-block;
+}
+
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+.section {
+    padding-top: 81px;
+}
+.section h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2 + p {
+    margin-bottom: 32px;
+}
+/* section1 */
+#main_video {
+    position: relative;
+}
+#main_video h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 8px 16px;
+}
+/* section2 ,3 common*/
+#event li, #sig li{
+    float: left;
+    width: 362px;
+}
+
+#event ul::after, #sig ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#event li:not(:nth-of-type(4n)), #sig li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+}
+
+/* section2 */
+#event h2 {
+    margin-bottom: 48px;
+}
+
+/* section3 */
+#sig li h3 {
+    margin: 16px 0 8px;
+}
+#sig li p {
+    margin: 8px 0 8px;
+}
+#sig li a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 8px 0;
+    margin-top: 16px;
+}
+
+/* section4 */
+
+
+/* footer */
+footer {
+    height: 81px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px;
+}

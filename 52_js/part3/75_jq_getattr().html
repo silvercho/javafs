@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        button {
+            margin: 10px;
+        }
+        .frame {
+            width: 600px;
+            border: 2px solid red;
+            margin: 10px;
+        }
+        .frame img {
+            width: 100%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">이미지 속성 확인하기</button>
+    <p class="frame"><img src="../assets/pic_1.jpg" alt="이미지1"></p>
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        const btn = $('.btn');
+        const imgTag = $('img');
+
+        btn.click = function(){
+            alert(imgTag.attr('src'));
+        };
+    </script>
+</body>
+
+</html>

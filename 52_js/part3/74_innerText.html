@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            background: #555;
+            font-size: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>red</li>
+        <li>blue</li>
+        <li>green</li>
+        <li>pink</li>
+    </ul>
+
+    <div></div>
+
+    <script>
+        /* 
+            var 변수 =요소.textContent; ~ 문자열 반환
+            요소.innerText = '문자열'; ~ 문자열 설정
+        */
+        
+        // 목록의 텍스트 (색상이름)을 클릭하면 아래 회색 박스에 해당 색상이름과 같은 색의 박스가 나타남 . 
+
+        const liTag = document.querySelectorAll('li');
+        const divTag = document.querySelector('div');
+
+        for (let i = 0; i <liTag.length; i++) {
+            //i = 0,1,2,3
+            liTag[i].onclick = function(){
+            let txt = liTag[i].innerText;
+            divTag.innerText = txt;
+            divTag.style.background = txt;
+        }
+}
+    </script>
+</body>
+
+</html>

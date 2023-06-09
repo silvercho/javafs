@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+            background: #888;
+            margin: 50px auto;
+        }
+        div p {
+            font-size: 40px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+        /* 
+            find('선택자') ~ 후손(자식+손자) 
+            
+            객체.속성;
+            객체.속성 = 값;
+            객체.메서드();
+
+            반환(가져오기)
+            var 변수 = 요소.innerText;
+            var 변수 = 요소.innerHTML;
+            설정(지정하기)
+            요소.innerText = 값;
+            요소.innerHTML = 값;
+
+        */
+        const box = $('div');
+        const txt = box.find('p');
+        
+        box.on('mousewheel', function(e){
+            // 마우스 휠을 내리면 e.deltaY가 양수 , 아니면 음수 
+            if (e.deltaY > 0){
+                $(this).css({background:'red'});
+                txt.html('마우스 휠을 올렸다.');
+            }else {
+                $(this).css({background:'blue'});
+                txt.html('마우스 휠을 내렸다.');
+            }
+        });
+    </script>
+</body>
+
+</html>

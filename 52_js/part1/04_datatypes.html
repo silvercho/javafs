@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>데이터 유형</h1>
+    <script>
+        /* 사용자가 객체
+            객체 : window , document , console ,...
+                -메서드
+                -속성
+           
+            window의 메서드
+            alert()
+            confirm ()
+            prompt()
+
+            이벤트
+            함수? 객체가 필요없는 메서드
+            alert()
+            confirm ()
+            prompt()
+            Number (매개변수)
+            내장 함수 :Number (문자열)
+            사용자 정의 함수 
+        */  
+       /*   
+            데이터 유형
+            1. string: 'abc' '문자열' 또는 "문자열"
+            2. number: 숫자
+            3. boolean(부울): true 또는 false
+            4. undefined
+            5. object(객체): 
+                Array(배열), Date(날짜), Math(수학), String(문자열), null, window , document , console .... 
+                BOM(Browser Object Model): window , document , ...
+                DOM(Document Object Model): document 
+
+            undefined는 변수에 값이 등록되기 전의 기본값이고,
+            null은 변수에 저장된 데이터를 비우고자할 때 사용된다.
+            Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환한다.
+        */
+        // 문자여른 '또는 ', "더블" 로 묶는다.
+        // string
+        let s1 = "자바스크립트";
+        let s2 = '100';
+        let s3 = '<h3>문자열</h3>';
+        let s4 = String(1000);
+
+        // number(숫자)
+        let n1 = 100;
+        //NaN(Not a Number) 숫자가 아니다. 
+        let n2 = Number('오백');
+        let n3 = Number('500');
+
+        // boolean -> 저장된 값은 true() 또는 false(거짓) -> 논리값
+        // 비교 연산자: >,<,>=,<==,==,!=,===,!==
+        // 논리 연산자 :&& (and),||(or),!(not)
+        // 논리/비교 연산자의 연산 결과는 true 또는 false
+        let b1 = true;
+        let b2 = 10 >=100;
+        let b3 = 10 >=100 || 10 <= 100;
+        let b4 = Boolean('hello');
+        // Boolean(값) ~ 값을 false, 0, null,undefined,''는 false 아니면 true 
+        let b5 = Boolean(0);
+        let b6 = Boolean(null); // 값을 삭제 할 때 사용하는 값
+        let b7 = Boolean(undefined);
+        let b8 = Boolean(''); //빈문자
+
+        // undefined ~ 선언 후 값을 할당하지 않았을 때의 값
+        let u;
+
+        // null
+        let n = null;
+
+
+        // 출력
+        document.write(s1, '<br>');
+        document.write(s2, '<br>');
+        document.write(s3, '<br>');
+        document.write(s4, '<br><br>');
+        document.write(n1, '<br>');
+        document.write(n2, '<br><br>');
+        document.write(b1, '<br>');
+        document.write(b2, '<br>');
+        document.write(b3, '<br>');
+        document.write(b4, '<br>');
+        document.write(b5, '<br>');
+        document.write(b6, '<br>');
+        document.write(b7, '<br>');
+        document.write(b8, '<br><br>');
+        document.write(u, '<br>');
+        document.write(n, '<br>');
+    </script>
+</body>
+
+</html>

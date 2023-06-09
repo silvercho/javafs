@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애플리케이션배포_조성은</title>
+    <style>
+        /* 가로 해상도: 390px */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 10px;
+        }
+        #wrap {
+            top: 80px;
+            margin: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 14px;
+            color: red;
+        }
+        span {
+            color : #000;
+            font-size: 4rem;
+        }
+        /* 로그인 버튼 */
+        button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 24px;
+            background: #333;
+            color: #fff;
+        }
+            /* 가입하기 버튼  */
+            #member {
+            position: absolute;
+            left:0;
+            width: 100%;
+            font-size: 1.5rem;
+            color: #777;
+        }
+        img {
+            padding-top: 30px;
+            padding-left: 70px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>트럼프카드GAME</h1>
+        <div id="result">결과가 궁금하시죠?</div>
+        <button id="againBtn">다시하기</button>
+        <button id="logoutBtn">게임종료</button>
+        <p>아이디와 패스워드를 입력후 로그인하세요.</p>
+        <p id="member">계정이 없으신가요? <a href="join.html">가입하기</a></p>  
+    </div>
+    <!-- CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const againBtn = document.querySelector('#againBtn');
+        const logoutBtn = document.querySelector('#logoutBtn');
+        const result = document.querySelector('#result');
+        let game = prompt('하트, 다이아, 클로버, 스페이드 넷 중 하나만 입력하세요.', '');
+
+        switch (game) {
+            case '하트':
+                gameNum = 1;
+                break;
+            case '다이아':
+                gameNum = 2;
+                break;
+            case '클로버':
+                gameNum = 3;
+                break;
+            case '스페이드':
+                gameNum = 4;
+                break;
+            default:
+                alert('하트, 다이아, 클로버, 스페이드 넷 중 하나만 입력하세요.');
+                location.reload();
+        }
+
+        let com = Math.floor(Math.random() * 4) + 1;
+        document.write('<img src="images/card_img_' + com + '.png" alt="하트"><br>');
+        
+        if (gameNum === com) {
+            result.innerHTML = '<p><span>축하합니다.<br>1만골드 당첨!</span></p>';
+        } else {
+            result.innerHTML = '<p>틀렸습니다. 다음 기회에...</p>';
+        }
+
+        againBtn.onclick = function(){
+            location.reload();
+        }; 
+        logoutBtn.onclick = function(){
+            location.href = 'index.html';
+        };
+    </script>
+</body>
+
+</html>

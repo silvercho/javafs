@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<style>
+     html {font-size: 10px;}
+   /*  body {font-size: 1.5em;}
+    div {font-size: 1.5em;}
+    div > div {font-size: .9em;}
+    div > div > div {font-size: .75em;} */
+
+   
+    body {font-size: 1.5em;}
+    div {font-size: 2.25em;}
+    div > div {font-size: 2.025em;}
+    div > div > div {font-size: 1.51875em;}
+    
+</style>
+<body>
+    <h1>난 부모의 2em =40px</h1>
+    <!-- em과 rem 공통점은 둘 다 배수 -->
+    <!-- 누구의 몇 배 인가. -->
+    <!-- rem은 무조건 html에서 지정한 글자 크기의 배수 -->
+    <!-- em은 부모에서 지정한 글자 크기의 배수 -->
+    <p>난 body에 글자다=15px</p>
+    <div>
+        글자크기 22.5px
+        <div>
+            글자크기 20.25px
+            <div>글자크기 15.1875px</div>
+        </div>
+    </div>
+</body>
+
+</html>

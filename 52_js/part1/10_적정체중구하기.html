@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>적정 체중 구하기</h1>
+    <script>
+        /* 
+            적정 체중 = (신장 - 100) * 0.9
+
+            예)
+            이름 : 홍길동 
+            신장: 180cm
+            체중: 74kg
+            적정 체중: (180 - 100) * 0.9 = 72
+            결과: 적정 체중은 72kg이며, 현재 적정 체중에서 2kg 초과하였습니다.
+        */
+
+        // 입력
+        var user_n = prompt ('당신의 이름을 입력하세요.');
+        var user_h = Number(prompt('당신의 키를 입력하세요.'));
+        var user_w = Number(prompt('당신의 몸무게를 입력하세요.'));
+        var result;
+        var normal_w
+
+        // 처리
+        // 적정 체중 = (신장 - 100) * 0.9
+        normal_w = (user_h - 100) * 0.9
+
+        //초과 몸무게 ? 내 몸무게 - 적정체중 
+        over_w = user_w - normal_w;
+
+        // 오차 범위 ±5
+        // normal_w - 5 <= user_w && user_w <= normal_w + 5
+        result =  user_w >= normal_w - 5 && user_w <= normal_w + 5
+
+        // 67 <= ? && ? <= 77
+        //적정 체중이다. 적정체중이 아니다.
+
+        result = result ? '이다' : '이 아니다.'
+        // 적정체중이다. 비만이다. 저체중이다.
+
+        
+        // 출력
+    //  홍길동님의 신장은 cm 이고 , 체중은 kg이며 적정체중은 xxxkg이고 , 현재 적정 체중에서 xxxkg 초과하였으므로 비만입니다.
+    //xxx 가 바뀌어야 할 부분 -> 변수처리
+    //변수와 문자열 +로 구분, 문자열은 ''또는 ""로 묶는다. 
+        document.write(user_n + '님의 신장은' + user_h + 'cm이고, 체중은 ' + user_w + 'kg이며, 당신의 적정 체중은 ' + result );
+
+        //적정체중이다. 적정체중이 아니다. 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <script>
+        /* 
+            대입(할당) 연산자 : =
+            복합 대입 연산자: =, +=, *=, -=, /=, %=, **=
+
+            %는 몫이 아닌 나눈 나머지 
+            var a = 1;
+            a= a + 1;
+            // a에 1을 더해서 a에 대입한다.
+            a += 1; 
+            a++; 
+            * a = 4
+        */
+
+        let num1 = 10;
+        const num2 = 3;
+
+        // num1 = num1 + num2
+        num1 += num2;
+        document.write(num1, '<br>')
+        
+        // num1 = num1 - num2
+        num1 -= num2;
+        document.write(num1, '<br>')
+
+        // num1 = num1 * num2
+        num1 *= num2;
+        document.write(num1, '<br>')
+
+        // num1 = num1 / num2
+        num1 /= num2;
+        document.write(num1, '<br>')
+        
+        // num1 = num1 % num2
+        num1 %= num2;
+        document.write(num1, '<br>')
+
+        // num1 = num1 ** num2
+        num1 **= num2;
+        document.write(num1, '<br>')
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            background: #555;
+            font-size: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>red</li>
+        <li>blue</li>
+        <li>green</li>
+        <li>pink</li>
+    </ul>
+
+    <div></div>
+
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        /* 
+            var 변수 =요소.textContent; ~ 문자열 반환
+            요소.innerText = '문자열'; ~ 문자열 설정
+        */
+        
+        // 목록의 텍스트 (색상이름)을 클릭하면 아래 회색 박스에 해당 색상이름과 같은 색의 박스가 나타남 . 
+
+        const liTag = $('li');
+        const divTag = $('div');
+
+            liTag.click(bgFn);
+                        
+            function bgFn(){
+            let txt = $(this).text();
+            divTag.html(txt);
+            divTag.css({backgroundColor: txt;});
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    
+    <!-- 
+        자바와 자바스크립트는 관계가 없다
+        자바 1991 제임스 고슬링
+        자바스크립트 1995 브렌던 아이크 
+        자바스크립트 히스토리
+        https://www.w3schools.com/js/js_history.asp
+
+        자바스크립트?
+        1. 웹 요소 제어
+            -HTML 콘텐츠 또는 속성 동적 변경
+            -CSS 속성 변경 
+        2. 다양한 라이브러리 활용
+            - 제이쿼리(jQuery)
+        3. 웹 애플리케이션 제작
+            - 리액트(React), 앵귤러(Angular), 뷰(View.js)
+        4. 서버 개발 
+            -Node.js , JAVA ,php ,asp ,jsp , ...
+        
+         객체지향(객체 기반) 프로그래밍 언어
+            현실세계                  
+             -물체: Tv,자동차,에어컨 ,사람,...
+             -움직임(켜다,끄다.달린다,멈춘다.)    
+             -특징(색상,모양,가격,이름,성별...)      
+             -시간 (사람이 발생 -누른다.)   
+
+            TV가 켜졌다.
+            TV.켜졌다;
+        자바 스크립트
+        -객체 (Object) : window,document,console, ...
+        -메서드(Methed) :alert () , confirm(), prompt (), write (),log(), . . .
+        -속성(Property) : style , length ,
+        -이벤트(Event)
+
+        기본문장형식
+        객체.메서드(매개변수1,매개변수2,...)
+
+        alret('문자열');
+        confirm("문자열");
+        document.write('문자열','<태그>',...);
+        console.log(매개변수1);
+
+        변수 : 데이터를 저장하는 공간.
+        매개변수? 메서드의 옵션으로 사용되는 변수
+        자바스크립트 언어 
+        코드 입력시 주의 사항
+            1. 자바스크립트는 대소문자를 구분한다.
+            2. 문장 끝에 세미콜론(;)을 쓴다.
+            3. 문자열 데이터는 큰따옴표("") 또는 작은 따옴표('')로 묶는다.
+     -->
+    <!-- 외부 스크립트 -->
+     <script src="script.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write('문자열');
+    </script>
+
+</head>
+
+<body>
+    <h1>WHERE</h1>
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write('hello');
+        var h1Tag = document.querySelector('h1');
+        h1Tag.style.color = 'blue';
+    </script>
+</body>
+
+</html>

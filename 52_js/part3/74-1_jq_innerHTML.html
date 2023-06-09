@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        button {
+            font-size: 20px;
+            margin: 20px;
+        }
+        span {
+            font-size: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>태그 구조 바꾸기</button>
+    <div>
+        <span>변경전 입니다.</span>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        /* 
+            객체.속성; -> 반환(가져오기)
+            객체.속성 = 값; -> 설정(지정하기)
+
+            요소.innerText; ~ HTML 구조를 문자열로 반환
+            요소.innerText = '값'; ~ HTML 구조를 문자열로 설정
+            요소.innerHTML; ~ HTML 구조 반환
+            요소.innerHTML = '값'; ~ HTML 구조 설정
+
+            객체.메서드();
+
+            요소.text();
+            요소.text(값); 
+            요소.html(); 
+            요소.html(값); 
+        */
+
+        const btn = $('button');
+        const box = $('div');
+
+        btn.clik = function(){
+            box.innerHTML ='<h1>변경 후 입니다.</h1>';
+        }
+        box.click = function(){
+            let txt = this.innerHTML;
+            alert(txt);
+        }
+    </script>
+</body>
+
+</html>

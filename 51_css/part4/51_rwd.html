@@ -8,10 +8,24 @@
     <title>RWD</title>
     <style>
         /* 
-            @meida [not|only] [mediatype] [and|,] (expressions) {
+
+            width: 너비;
+            height
+            min-width :최소너비;
+            max-width :최대너비;
+            min-height
+            max-height
+
+            미디어 쿼리 작성 형식
+            @media [not|only] screen[and|,] (expressions) {
                 CSS-code;
             }
 
+            미디어 쿼리 
+            조건에 만족하는 장치에 대해 CSS-code를 적용시킨다. 
+            @media (조건){
+                css-code;
+            }
             mediatype: all, screen, tv, projection, print, ...
             and: 그리고
             , : 또는
@@ -20,14 +34,21 @@
 
         /* 데스크탑의 배경색은 blue, 테블릿의 배경색은 green, 폰의 배경색은 red이 되도록 반응형 웹을 만들어 보세요. 미디어쿼리의 중단점은 768, 1200으로 지정합니다. */
 
-        /* phone */
-        
+        /* 모바일 우선 제작 */
+        /* 767px이하 */
+        /* phone:최소너비가 576px이상 */   
 
-        /* tablet */
+         body {background: red;}
+    
+        /* tablet:최소너비가 768이상 */
+        @media (min-width:768px){
+                body {background: green; color:white;}
+            }
 
-
-        /* desktop */
-
+        /* desktop:1200이상 */
+        @media (min-width:1200px){
+                body {background: blue;}
+            }
 
     </style>
 </head>
