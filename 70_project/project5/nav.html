@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 초기화 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #101010;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.5rem;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            background: #FDD000;
+        }
+        .logo {
+            text-align: center;
+            letter-spacing: 0.5rem;
+            line-height: 1;
+        }
+        .logo b {
+            font-size: 2.2rem;
+            display: block;
+        }
+        .logo span {
+            font-size: 1.6rem;
+        }
+        /* gnb(global navigation bar)*/
+        #gnb {
+            z-index: 9999;
+            position: relative;
+            height: 94px;
+            background: #FDD000;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            //메인 메뉴 높이만큼 내려준다.
+            top: 94px;
+            width: 100%;
+            background: #FDD000;
+        }
+
+        /* 1depth: main */
+        /* 폰트의 위계를 지정할 것 : 크기, 글꼴 , 색 , 굵기 */
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main>li {
+            /* 삼각형 모양 기준 */
+            position: relative;
+            width: 160px;
+            /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
+            text-align: center;
+        }
+
+        .main>li>a {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            line-height: 94px;
+            padding: 5px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #101010;
+        }
+
+        .main>li>a:hover {
+            background: #ccc;
+            color: #333;
+        }
+        .main>li>a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            transform: scaleX(0);
+            transition: .3s;
+            width: 100%;
+            border-bottom: 2px solid #876f05;
+            color: #ccc;
+        }
+
+        .main>li>a:hover:after {
+            position: absolute;
+            top: 30px;
+
+            transform: scaleX(1);
+            content: '';
+            width: 100%;
+            height: 0;
+            border: 2px solid #876f05;
+            color: #ccc;
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding: 15px 0;
+        }
+
+        .sub a {
+            line-height: 2;
+            color: #ccc;
+            font-size: 1.4rem;
+            font-weight: 300;
+            padding: 3px 12px;
+        }
+
+        .sub a:hover {
+            background: rgb(253, 207,0, 32);
+        }
+        /* 로그인 회원가입 */
+        .member a{
+            margin: 0 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="#"><b>MEGACOFFEE</b><span>메가커피</span></a></h1>
+    <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+    <nav id="gnb">
+        <!-- 서브메뉴의 배경 -->
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li>
+                <a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">서브1메뉴1</a></li>
+                    <li><a href="#">서브1메뉴2</a></li>
+                    <li><a href="#">서브1메뉴3</a></li>
+                    <li><a href="#">서브1메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">사업분야 </a>
+                <ul class="sub">
+                    <li><a href="#">서브2메뉴1</a></li>
+                    <li><a href="#">서브2메뉴2</a></li>
+                    <li><a href="#">서브2메뉴3</a></li>
+                    <li><a href="#">서브2메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">뉴스룸</a>
+                <ul class="sub">
+                    <li><a href="#">서브3메뉴1</a></li>
+                    <li><a href="#">서브3메뉴2</a></li>
+                    <li><a href="#">서브3메뉴3</a></li>
+                    <li><a href="#">서브3메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+                <ul class="sub">
+                    <li><a href="#">서브4메뉴1</a></li>
+                    <li><a href="#">서브4메뉴2</a></li>
+                    <li><a href="#">서브4메뉴3</a></li>
+                    <li><a href="#">서브4메뉴4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- 로그인/회원가입 -->
+    <div class="member">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+    </div>
+</header>
+
+</body>
+
+</html>

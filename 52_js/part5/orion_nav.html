@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 초기화 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /* gnb(global navigation bar)*/
+        nav {
+            z-index: 9999;
+            position: relative;
+            height: 31px;
+            background: red;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 31px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 1depth: main */
+        /* 폰트의 위계를 지정할 것 : 크기, 글꼴 , 색 , 굵기 */
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main>li {
+            /* 삼각형 모양 기준 */
+            position: relative;
+            width: 160px;
+            /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
+            text-align: center;
+        }
+
+        .main>li>a {
+            display: block;
+            width: 100%;
+            padding: 5px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .main>li>a:hover {
+            background: #ccc;
+            color: #333;
+        }
+
+        .main>li>a:hover:after {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            height: 0;
+            border-bottom: 10px solid;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            color: #ccc;
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding: 15px 0;
+        }
+
+        .sub a {
+            line-height: 2;
+            color: #ccc;
+            font-size: 1.4rem;
+            font-weight: 300;
+            padding: 3px 12px;
+        }
+
+        .sub a:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+    <nav id="gnb">
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li>
+                <a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">서브1메뉴1</a></li>
+                    <li><a href="#">서브1메뉴2</a></li>
+                    <li><a href="#">서브1메뉴3</a></li>
+                    <li><a href="#">서브1메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">사업분야 </a>
+                <ul class="sub">
+                    <li><a href="#">서브2메뉴1</a></li>
+                    <li><a href="#">서브2메뉴2</a></li>
+                    <li><a href="#">서브2메뉴3</a></li>
+                    <li><a href="#">서브2메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">뉴스룸</a>
+                <ul class="sub">
+                    <li><a href="#">서브3메뉴1</a></li>
+                    <li><a href="#">서브3메뉴2</a></li>
+                    <li><a href="#">서브3메뉴3</a></li>
+                    <li><a href="#">서브3메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+                <ul class="sub">
+                    <li><a href="#">서브4메뉴1</a></li>
+                    <li><a href="#">서브4메뉴2</a></li>
+                    <li><a href="#">서브4메뉴3</a></li>
+                    <li><a href="#">서브4메뉴4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // 내비게이션바
+            $('.main > li').mouseenter(function (e) {
+                $('.sub').stop().slideDown(400);
+                $('.nav_bg').stop().animate({ height: 150 },400 );
+            });
+            $('nav').mouseleave(function () {
+                $('.sub').stop().slideUp(400);
+                $('.nav_bg').stop().animate({ height: 0 },400);
+            });
+
+            // 이미지 슬라이드 효과
+            var ct = 0;
+
+            $("#slide li:eq(0)").siblings().css({ top: -300 });
+
+            setInterval(function () {
+
+                if (ct == 2) {
+                    ct = 0;
+                } else {
+                    ct = ct + 1;
+                }
+
+                $("#slide li").eq(ct - 1).animate({ top: 300 }, function () {
+                    $(this).css({ top: -300 });
+                });
+                $("#slide li").eq(ct).animate({ top: 0 });
+
+            }, 4000);
+
+
+            // 모달 레이어 팝업
+            $(".notice li:eq(0)").click(function () {
+                $("#modal").show();
+            });
+            $(".popup button").click(function () {
+                $("#modal").hide();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
