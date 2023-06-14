@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 탭 메뉴 */
+        .tabs {
+            padding: 24px 24px 24px 0;
+            background-clip: content-box;
+
+        }
+
+        .tabs input,
+        .tabs>div {
+            display: none;
+        }
+
+        .tabs div {
+            display: none;
+        }
+
+        #btn1:checked~#tab1,
+        #btn2:checked~#tab2 {
+            display: block;
+        }
+
+        /* 탭 메뉴 - 제목/버튼 */
+        .tabs label {
+            display: inline-block;
+            padding: 4px 16px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 1.6rem;
+            font-weight: 500;
+            background: #EBDACA;
+            color: #111;
+        }
+
+        #btn1:checked+label,
+        #btn2:checked+label {
+            background: #672F2E;
+            color: #fff;
+        }
+
+        /* 탭 메뉴- 공지사항 */
+        #tab1 li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #ccc;
+            white-space: nowrap;
+        }
+
+        #tab1 a {
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            /* 말 줄임 ...효과 */
+            text-overflow: ellipsis;
+        }
+
+        #tab1 a:hover {
+            color: #000;
+        }
+
+        /* 탭 메뉴- 갤러리 */
+        #tab2 ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #tab2 a {
+            display: inline-block;
+            width: 110px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <!-- 제목/버튼 -->
+        <input type="radio" name="tabs" id="btn1" checked>
+        <label for="btn1">공지사항</label>
+        <input type="radio" name="tabs" id="btn2">
+        <label for="btn2">갤러리</label>
+        <!-- 공지사항 -->
+        <div id="tab1">
+            <ul>
+                <li><a href="#">맞춤 플랜을 제안하는 쇼핑몰 </a><span>2020-05-15</span></li>
+                <li><a href="#">JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</a><span>2021-05-15</span></li>
+                <li><a href="#">코리아웨딩페어 결혼박람회가 열립니다.</a><span>2022-05-15</span></li>
+                <li><a href="#">마진없이 아낌없이 드리는 마지막 찬스! 지금 당장클릭하세요!</a><span>2023-05-15</span></li>
+            </ul>
+        </div>
+        <!-- 갤러리 -->
+        <div id="tab2">
+            <ul>
+                <li><a href="#"><img src="images/i1.jpg" alt="모자"></a></li>
+                <li><a href="#"><img src="images/i2.jpg" alt="클러치백"></a></li>
+                <li><a href="#"><img src="images/i3.jpg" alt="장갑"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
