@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron&family=Play&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
+@import url('http://fonts.cdnfonts.com/css/trajan-pro');
 @import url('typo.css');
 @import url('nav.css');
 @import url('layout.css');
@@ -163,7 +164,7 @@
 /* 섹션2 - ??? */
 #section2 {
     position: relative;
-    background: lightblue url(../images/slide0.jpg) no-repeat 50% 50%/cover fixed;
+    background: lightblue /* url(../images/slide0.jpg) no-repeat 50% 50%/cover fixed; */
 }
 
 /* 고스트(ghost) 버튼 */
@@ -357,4 +358,228 @@
     padding-bottom: 10px;
     font-size: 1.8rem;
     color: #005295;
+}
+/* 섹션4 : 브랜드 소개  */
+
+#section4 {
+    position: relative;
+    height: 100vh;
+    background: #e0d7d6;
+}
+
+#section4 .container {
+    position: relative;
+    height: 505px;
+    margin-top: 50px;
+}
+
+#section4 .container>div {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 900px;
+}
+
+#section4 .story {
+    left: 0px;
+}
+
+#section4 .identity {
+    right: 0px;
+}
+
+/* background text motion */
+#section4 .bgTxt {
+    position: relative;
+    height: 180px;
+    font: 700 90px/1 'Trajan Pro', sans-serif;
+    letter-spacing: -0.375px;
+    color: #cfc0bb;
+    overflow: hidden;
+    /* 줄바꿈 안함 */
+    white-space: nowrap;
+}
+
+#section4 .bgTxt span {
+    display: inline-block;
+    /* 인라인 요소 간 수직 중앙 맞춤  */
+    vertical-align: middle;
+}
+
+#section4 .bgTxt span::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 75px;
+    height: 90px;
+    margin-right: 15px;
+    background: url('../images/dot.png') no-repeat center;
+}
+
+#section4 .bgTxt div {
+    position: absolute;
+    animation: topMotion 20s linear infinite;
+}
+
+#section4 .bgTxt .top {
+    top: 0;
+    left: -109%;
+    animation-name: topMotion;
+    
+}
+
+#section4 .bgTxt .btm {
+    top: 90px;
+    left: 0;
+    animation-name: btmMotion;
+}
+
+@keyframes topMotion {
+    0% {left: -105.5%;}
+    99.99999% {left: 0;}
+    100% {left: -105.5%;}
+}
+
+@keyframes btmMotion {
+    0% {left: 0;}
+    99.99999% {left: -105.5%;}
+    100% {left: 0;}
+}
+
+/* 페이드효과 */
+#section4 .fade {
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    /* 마우스 호버 시 영역안에서 이미지 크기가 커지게 */
+    overflow: hidden;
+}
+
+#section4 .story .fade {
+    bottom: 0;
+}
+
+#section4 .identity .fade {
+    top: 0;
+}
+
+#section4 .fade li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+#section4 .fade img {
+    transition: 1s;
+}
+
+#section4 .fade:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+/* 링크버튼 */
+#section4 .fade .btn {
+    position: absolute;
+    overflow: hidden;
+    width: 170px;
+    height: 45px;
+    background: #004c6b;
+    color: #fff;
+    line-height: 45px;
+    font-size: 0.9em;
+}
+
+#section4 .fade .btn::before {
+    content: '';
+    position: absolute;
+    left: -170px;
+    top: 0;
+    transition: 1s;
+    width: 170px;
+    height: 45px;
+    background: #706142;
+}
+
+#section4 .fade:hover .btn::before {
+    left: 0px;
+}
+
+#section4 .fade .btn b {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#section4 .fade .btn i {
+    position: absolute;
+    z-index: 1;
+}
+
+#section4 .story .btn {
+    left: 550px;
+    top: 60px;
+}
+
+#section4 .identity .btn {
+    left: 170px;
+    top: 260px;
+}
+
+#section4 .story .btn b {
+    left: 30px;
+}
+
+#section4 .identity .btn b {
+    left: 20px;
+}
+
+#section4 .story .btn i {
+    left: 140px;
+    top: 15px;
+}
+
+#section4 .identity .btn i {
+    left: 150px;
+    top: 17px;
+}
+
+/* title */
+#section4 .container .title {
+    position: absolute;
+    width: 325px;
+    height: 300px;
+    background: url("../images/line.png") no-repeat;
+}
+
+#section4 .story .title {
+    left: 500px;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+#section4 .identity .title {
+    left: 60px;
+    top: 220px;
+}
+
+#section4 .container .title h3 {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 1.8em;
+    margin: -30px 0 0 20px;
+    letter-spacing: -3px;
+}
+
+#section4 .story .title h3 {
+    right: 35px;
+    bottom: -15px;
+    transform: rotate(-180deg);
+}
+
+#section4 .identity .title h3 {
+    right: 37px;
+    top: 230px;
+    text-align: right;
 }

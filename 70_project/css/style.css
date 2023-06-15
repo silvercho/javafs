@@ -2,6 +2,8 @@
 @import url(reset.css);
 @import url(typo.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css);
+
 
 /* header */
 header {
@@ -134,17 +136,24 @@ section h2 + p {
     width: 90%;
 }
 
-.counter {
-    display: flex;
-    color: #fff;
-    justify-content: space-around;
+#counter {
+    /* display: flex;
+    justify-content: space-around; */
     align-items: center;
+    text-align: center;
     height: 132px;
+    color: #fff;
     background: #616161;
 }
-.counter span {
+#counter .row {
+    display: flex;
+}
+#counter ul {
+    align-items: center;
+}
+#counter span {
     display: block;
-    text-align: center;
+    
 }
 
 /* section3 */
@@ -162,13 +171,15 @@ section h2 + p {
     margin-bottom: 12px;
     overflow: hidden;
 }
+
 #portfolio .moreBtn {
     margin-top: 64px;
+    padding: 4px;
     text-align: center;
 }
-#portfolio .moreBtn a {
-    background: #f1f1f1;
+#portfolio .moreBtn button {
     padding: 12px 24px;
+    font-size: 1.5rem;
 }
 /* 
     컨테이너 크기 :960px
