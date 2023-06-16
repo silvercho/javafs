@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-y: hidden;
+        }
+
+        .section {
+            height: 100vh;
+        }
+
+        #section1 {
+            background-color: aqua;
+        }
+
+        #section2 {
+            background-color: royalblue;
+        }
+
+        #section3 {
+            background-color: green;
+        }
+
+        #section4 {
+            background-color: gray;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: 2s;
+            height: 150px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>헤더</h2>
+    </header>
+
+    <div id="fullpage">
+        <section id="section1" class="section">
+            <h1>섹션 1</h1>
+        </section>
+        <section id="section2" class="section">
+            <h1>섹션 2</h1>
+        </section>
+        <section id="section3" class="section">
+            <h1>섹션 3</h1>
+        </section>
+        <section id="section4" class="section last">
+            <h1>섹션 4</h1>
+        </section>
+    </div>
+    <script>
+        const headerBg = document.querySelector("header");
+
+        window.onscroll = function () {
+            let st = document.documentElement.scrollTop;
+            if (st < 0) {
+                headerBg.style.backgroundColor = "brown";
+            } else {
+                headerBg.style.backgroundColor = "transparent";
+            }
+        }
+        
+
+    </script>
+
+
+
+</body>
+
+</html>

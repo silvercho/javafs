@@ -1,6 +1,8 @@
 // 문서가 준비되면 함수 실행
 $(function () {
 
+    // 헤더 
+    const headerBg = $('#heaer');
     // 내비게이션바
     $('.main > li > a').mouseenter(function (e) {
         // a태그 기본 이벤트 제거
@@ -107,10 +109,12 @@ $(function () {
             btn.css({ opacity: 1 });
             txt1.css({ left: 360 + 'px' });
             txt2.css({ left: 360 + 'px' });
+            headerBg.css({background :'#ABD9FF'});
         } else {
             btn.css({ opacity: 0 });
             txt1.css({ left: -800 + 'px' });
             txt2.css({ left: -400 + 'px' });
+            headerBg.css({background :'transparent'});
         }
     });
     // 섹션 3 : 탭 
@@ -166,6 +170,28 @@ $(function () {
         inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
     }
 
+    // 패밀리사이트
+    const fs = $('.fs'),
+    fsLst = fs.find('ul'),
+    fsIcon = fs.find('i'),
+    fsTxt = fs.find('span'),
+    fsBtn = fs.find('.fsBtn');
+
+let state = 0;
+fsBtn.click(function () {
+    fsLst.slideToggle();
+    /* 삼각형 모양 바꾸기 */
+    if (state == 0) {
+        fsIcon.attr({ class: 'fa-solid fa-minus' });
+        fsTxt.text('관련 사이트 닫기');
+        state = 1;
+    } else {
+        fsIcon.attr({ class: 'fa-solid fa-plus' });
+        fsTxt.text('관련 사이트 열기');
+        state = 0;
+    }
+});
+
     // 풀페이지 레이아웃
     $('html').stop().animate({ scrollTop: 0 });
 
@@ -208,3 +234,4 @@ $(function () {
         }
     });
 });
+

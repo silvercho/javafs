@@ -1,0 +1,20 @@
+#header {
+    transition-delay: 0.5s;
+transition-duration: 0.5s;
+}
+
+
+// 헤더
+    const headerBg = $('#header');
+
+    // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
+    $(window).scroll(function () {
+        // 스크롤바를 스크롤한 양을 st에 저장
+        let st = $(this).scrollTop();
+
+        if (st <= 0) {
+            headerBg.css({ background: 'transparent' })
+        } else {
+            headerBg.css({ background: '#888' })
+        }
+    });
