@@ -30,18 +30,18 @@ img {
 }
 /* 섹션2-진행바 */
 
-.progress .lst > span {
+#skill .progress .lst > span {
     letter-spacing: 8px;
     color: #777;
 }
-.progress .lst div{
+#skill .progress .lst div{
     color: #fff;
 }
 /* 섹션2-카운터 */
-.counter {
+#counter {
     color: #fff;
 }
-.counter span {
+#counter span {
     font-size: 2.4rem;
 }
 

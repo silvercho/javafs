@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        div {
+            height: 100vh;
+        }
+        span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Counter</h1>
+    </div>
+    <div id="counter">
+        <ul>
+            <li><span>0+</span>숫자의 의미</li>
+            <li><span>0+</span>숫자의 의미</li>
+            <li><span>0+</span>숫자의 의미</li>
+            <li><span>0+</span>숫자의 의미</li>
+        </ul>
+    </div>
+
+    <br>
+    <button>Click Me</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const elem = $('#counter span');
+        let state = 0;
+
+        $(window).scroll(function () {
+            //윈도우 스크롤이 150 이상이면 
+            console.log($(this).scrollTop());
+            if ($(this).scrollTop() >= 150) {
+                if (state === 0){
+                    move(0 , 32);
+                    move(1 , 8);
+                    move(2 , 4);
+                    move(3 , 3);
+                    state = 1;
+                } else {
+                    state = 0;
+                    return;
+                }   
+            }
+        });
+
+        function move(idx , maxCnt , mSec) {
+            let num = 0;
+            const timer = setInterval(counter, mSec);
+            function counter() {
+                if (num >= maxCnt) {
+                    clearInterval(timer);
+                } else {
+                    num++;
+                    elem.eq(idx).text(`${num}+`);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

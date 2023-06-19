@@ -49,7 +49,7 @@ header i {
 /* section2~4 공통 */
 .container {
     width:960px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-bottom: 81px;
 }
 .parallax {
@@ -75,30 +75,18 @@ section h2 + p {
 
 /* section2 */
 
-.profile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 .profile p {
     text-align: justify;
     word-break: break-all; /* 영어 사용시 */
 }
 .profile p:first-of-type {
-    flex : 100%;
+    /* flex : 100%; */
     margin-bottom: 54px;
 }
 
 .profile div {
-    flex : 0 0 48%;
+    /* flex : 0 0 48%; */
     text-align: center;
-}
-.profile p:last-of-type {
-    flex : 0 0 48%;
-}
-
-.photo {
-    width: 425px;
 }
 .photo img {
     margin-top: 54px;
@@ -113,43 +101,30 @@ section h2 + p {
     text-align: center;
 }
 
-.progress .lst > span {
-    display: inline-block;
-    margin: 16px;
-}
-.progress .lst div{
-    background: #eee;
-}
-.progress .lst div span{
-    display: block;
-    height: 34px;
-    background: #555;
-    text-align: center;
-}
-.progress .lst:nth-of-type(1) div span{
-   width: 85%;
-}
-.progress .lst:nth-of-type(2) div span{
-    width: 95%;
-}
-.progress .lst:nth-of-type(3) div span{
-    width: 90%;
+#skill .progress {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 16px;
+    height: 30px;
+    line-height: 30px;
 }
 
-#counter {
-    /* display: flex;
-    justify-content: space-around; */
-    /*  align-items: center;
-    text-align: center; */
-    height: 132px;
+#skill .progress div {
+    width: 0%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #04AA6D;
+    text-align: center;
+    color: white;
+}
+    /* 카운터 */
+
+#counter ul {  
+    padding: 50px 0;
     color: #fff;
     background: #616161;
-}
-#counter .row {
-    display: flex;
-}
-#counter ul {
     align-items: center;
+    text-align: center;
 }
 #counter span {
     display: block;
@@ -160,16 +135,15 @@ section h2 + p {
 #portfolio .parallax {
     background-image: url(../images/성은1.jpg);
 }
-#portfolio ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;   
-}
+
 #portfolio li {
     width: 231px;
     height: 162px;
     margin-bottom: 12px;
     overflow: hidden;
+}
+#portfolio li img {
+    border: 1px solid rgba(0, 0, 0, 0.1);   
 }
 
 #portfolio .moreBtn {
@@ -192,11 +166,8 @@ section h2 + p {
 #contact .parallax {
     background-image: url(../images/parallax3.jpg);
 }
-#contact .container {
-    display: flex;
-}
+
 #map {
-    flex: 0 0 330px;
     height: 160px;
     border-radius: 5px;
     margin-right: 30px;
@@ -212,15 +183,15 @@ section h2 + p {
     text-align: right;
 }
 #contact [name] {
-    width: 292px;
-    height: 44px;
+   /*  width: 292px;
+    height: 44px; */
     padding-left: 8px;
 }
 #contact [name="user_name"] {
     margin-right: 11px;
 }
 #contact [name*="message"] {
-    width: 600px;
+   /*  width: 600px; */
     margin: 16px 0;
 }
 #contact button {
